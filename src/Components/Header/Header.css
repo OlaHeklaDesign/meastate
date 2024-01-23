@@ -33,3 +33,9 @@ header button {
   border: 1px solid #093642;
   background: transparent;
 }
+
+.header-bg {
+  background-image: url('../Assets/bg-strips.png');
+  background-position: center;
+  background-repeat: repeat-y;
+}

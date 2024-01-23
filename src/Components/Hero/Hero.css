@@ -1,0 +1,104 @@
+.hero {
+  max-width: 1292px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+}
+
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.hero-left-headling-box {
+  margin-top: 38px;
+}
+
+.hero-left-headling-box h1 {
+  font-family: "Space Grotesk";
+  font-size: 55px;
+  font-weight: 700;
+  line-height: 66px;
+  letter-spacing: 2.2px;
+}
+
+.hero-left-headling-firstline {
+  display: flex;
+  align-items: center;
+  gap: 23px;
+}
+
+.hero-headling-square {
+  width: 14px;
+  height: 14px;
+  background: #D2D9DC;
+}
+
+.hero-left-description {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+  text-transform: uppercase;  
+  letter-spacing: 0.28px;
+  margin-top: 17px;
+  margin-right: 460px;
+}
+
+.hero-right {
+  position: relative;
+}
+
+.hero-right img {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-right-imgbg {
+  width: 622px;
+  height: 317px;
+  background: rgba(9, 54, 66, 0.15);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.hero-left-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 63px;
+  width: 100%;
+  padding-right: 134px;
+}
+
+.hero-left-bottom p {
+  text-align: center;
+}
+
+.hero-left-bottom-maintext {
+  font-family: "Space Grotesk";
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: 0.6px;
+}
+
+.hero-left-square {
+  width: 72px;
+  height: 72px;
+  background: rgba(9, 54, 66, 0.15);
+  position: absolute;
+  bottom: 0;
+  left: -72px;
+}
+
+.hero-bg {
+  background-image: url('../Assets/bg-strips.png');
+  background-position: center;
+  background-repeat: repeat-y;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
