@@ -1,0 +1,35 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1292px;
+  margin: 0 auto;
+  padding-top: 16px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+header ul {
+  display: flex;
+  align-items: center;
+  gap: 65px;
+}
+
+header li {
+  list-style: none;
+}
+
+header li a {
+  text-decoration: none;
+}
+
+header button {
+  margin-left: 37px;
+  text-transform: uppercase;
+  padding: 10px 62px;
+  border: 1px solid #093642;
+  background: transparent;
+}

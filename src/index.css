@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #093642;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+body {
+  background: #F6F6F7;
+}
+
+.straps-bg-and-line {
+  background-image: url('./Components/Assets/bg-strips.png');
+  background-position: center;
+  background-repeat: repeat-y;
+}
