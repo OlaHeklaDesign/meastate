@@ -1,0 +1,76 @@
+footer {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1292px;
+  margin: 0 auto;
+  padding: 70px 0;
+}
+
+footer h3 {
+  font-family: "Space Grotesk";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0.8px;
+  margin-bottom: 16px;
+}
+
+.footer-logo-copy-container img {
+  margin-bottom: 32px
+}
+
+.footer-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-contact {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  margin-top: 34px;
+}
+
+.footer-social {
+  background: #BBC6C9;
+  padding: 7px;
+}
+
+.footer-menu-container li {
+  list-style: none;
+}
+
+.footer-menu-container a {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.28px;
+  text-transform: uppercase;
+}
+
+.footer-menu-container ul {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.footer-info-container a {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.28px;
+  text-transform: uppercase;
+}
+
+.footer-info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}

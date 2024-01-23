@@ -1,0 +1,57 @@
+.testimonial-bg {
+  background: #EAEAEB;
+}
+
+.testimonialhero {
+  max-width: 1292px;
+  margin: 0 auto;
+  padding: 61px 0 122px 0;
+}
+
+.testimonialhero-title-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 76px;
+}
+
+.testimonialhero-title-buttons h2 {
+  font-family: "Space Grotesk";
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 66px;
+  letter-spacing: 1.6px;
+}
+
+.testimonialhero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.testimonialhero-buttons button {
+  border: none;
+  outline: none;
+  background: #BBC6C9;
+  padding: 8px;
+}
+
+.testimonials-slider {
+  overflow: hidden;
+  width: 1235px;
+}
+
+.testimonials-slides {
+  display: flex;
+  gap: 105px;
+  align-items: start;
+  overflow: hidden;
+  width: 3915px;
+  }
+  
+.testimonial {
+    min-width: 535px;
+}
+
+.testimonial-prevBtn, .testimonial-nextBtn {
+  cursor: pointer;
+}

@@ -1,9 +1,9 @@
-import testimonial1 from './testimonial/testi1';
-import testimonial2 from './testimonial/testi2';
-import testimonial3 from './testimonial/testi3';
-import testimonial4 from './testimonial/testi4';
-import testimonial5 from './testimonial/testi5';
-import testimonial6 from './testimonial/testi6';
+import testimonial1 from './testimonial/testi1.png'
+import testimonial2 from './testimonial/testi2.png';
+import testimonial3 from './testimonial/testi3.png';
+import testimonial4 from './testimonial/testi4.png';
+import testimonial5 from './testimonial/testi5.png';
+import testimonial6 from './testimonial/testi6.png';
 
 let all_testimonials = [
   {
@@ -43,3 +43,5 @@ let all_testimonials = [
     investment: "Investment - Luxury Penthouse with Skyline Views", 
   },
 ]
+
+export default all_testimonials
