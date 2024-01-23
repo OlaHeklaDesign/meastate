@@ -1,0 +1,58 @@
+.latestproperty {
+  max-width: 1292px;
+  margin: 0 auto;
+  padding: 86px 0 173px 0;
+  background-image: url('../Assets/bg-strips.png');
+  background-position: center;
+  background-repeat: repeat-y;
+}
+
+.latestproperty-title-buttons-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 58px;
+}
+
+.latestproperty-title-buttons-container h2 {
+  font-family: "Space Grotesk";
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 66px;
+  letter-spacing: 1.6px;
+}
+
+.latestproperty-title-buttons-container button {
+  border: none;
+  outline: none;
+  background: #BBC6C9;
+  padding: 8px;
+}
+
+.latestproperty-buttons {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.latestproperty-slider {
+  overflow: hidden;
+  width: 1292px;
+  margin: 0 auto;
+}
+
+.latestproperty-slides {
+  display: flex;
+  gap: 24px;
+  align-items: start;
+  overflow: hidden;
+  width: 3924px;
+  }
+  
+.offertitem {
+    min-width: 305px;
+}
+
+.latestproperty-prevBtn, .latestproperty-nextBtn {
+  cursor: pointer;
+}
