@@ -1,0 +1,75 @@
+.searchbar {
+  max-width: 1292px;
+  margin: 0 auto;
+  border: 1px solid #EAEAEB;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 34px 50px;
+  background: #F6F6F7;
+}
+
+.searchbar p {
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0.32px;
+  text-transform: uppercase;
+}
+
+.searchbar-inputs {
+  display: flex;
+  align-items: center;
+  gap: 110px;
+}
+
+.searchbar-offer-box {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+.searchbar-location-box input {
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+.searchbar-surface-box div,
+.searchbar-market-box div,
+.searchbar-price-box div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.searchbar-surface-box div p,
+.searchbar-market-box div p,
+.searchbar-price-box div p {
+  color: rgba(9, 54, 66, 0.70);
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 0.24px;
+  text-transform: uppercase;
+}
+
+.searchbar-location-box,
+.searchbar-surface-box,
+.searchbar-market-box,
+.searchbar-price-box {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.searchbar button {
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.32px;
+  text-transform: uppercase;
+  background: #093642;
+  padding: 10px 22px;
+  border: none;
+  outline: none;
+}

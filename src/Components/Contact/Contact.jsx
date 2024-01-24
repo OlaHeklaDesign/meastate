@@ -7,7 +7,8 @@ const Contact = () => {
     <div class="contact-bg-container">
     <section class="contact">
       <div class="contact-left">
-        <h2>Let Us Know What Real Estate You Need</h2>
+        <h2>Haven't you found your dream home?</h2>
+        <p>Write us what you are looking for<br/>and we'll find what you need.</p>
       </div>
       <div class="contact-right">
         <div class="contact-name-email-box">

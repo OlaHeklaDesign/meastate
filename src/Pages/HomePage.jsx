@@ -5,6 +5,7 @@ import Steps from '../Components/Steps/Steps';
 import Contact from '../Components/Contact/Contact';
 import TestimonialHero from '../Components/TestimonialHero/TestimonialHero';
 import LatestProperty from '../Components/LatestProperty/LatestProperty';
+import TextBg from '../Components/TextBg/TextBg';
 
 const HomePage = () => {
   return (
@@ -14,6 +15,7 @@ const HomePage = () => {
       <LatestProperty />
       <TestimonialHero/>
       <Steps />
+      <TextBg />
       <Contact />
     </div>
   )

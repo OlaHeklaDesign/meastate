@@ -21,6 +21,15 @@
   line-height: 50px; 
   letter-spacing: 1.6px;
   max-width: 400px;
+  margin-bottom: 36px;
+}
+
+.contact-left p {
+  color: #F6F6F7;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0.8px;
 }
 
 .contact-name-email-box {

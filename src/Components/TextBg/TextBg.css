@@ -1,0 +1,18 @@
+.textbg {
+  background-image: url('../Assets/bg-strips.png');
+  background-position: center;
+  background-repeat: repeat-y;
+}
+
+.textbg p {
+  color: #E4E8E9;
+  font-family: "Space Grotesk";
+  font-size: 124px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 144px;
+  letter-spacing: 4.96px;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}

@@ -1,0 +1,24 @@
+.offertdescription {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  padding-top: 73px;
+}
+
+.offertdescription p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0.64px;
+  margin-right: 270px;
+}
+
+.offertdescription-floorplan h4 {
+  font-family: "Space Grotesk";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: 0.72px;
+  margin-left: 43px;
+  padding-bottom: 15px;
+}

@@ -48,7 +48,6 @@ const Steps = () => {
           </div>
         </div>
       </div>
-      <p class="steps-decor-text">Can't Be Any Simpler</p>
     </section>
   </div>
   )

@@ -1,0 +1,48 @@
+.offertslider-mainimg {
+  max-width:743px;
+  width: 100%;
+  max-height: 417px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.offertslider-buttons button {
+  border: none;
+  outline: none;
+  border: 1px solid rgba(9, 54, 66, 0.50);
+  background: #FFF;
+  padding: 9px;
+}
+
+.offertslider-mainimg {
+  position: relative;
+}
+
+.offertslider-buttons {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 10;
+  padding: 0 25px;
+}
+
+.offertslider-images {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-top: 13px;
+  max-width:743px;
+  width: 100%;
+}
+
+.offertslider-images img {
+  max-width:194px;
+  width: 100%;
+  max-height: 100px;
+  height: 100%;
+}

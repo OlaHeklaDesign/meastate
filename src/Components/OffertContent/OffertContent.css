@@ -1,0 +1,143 @@
+.offertcontent {
+  flex: 1;
+  padding-left: 50px;
+}
+
+.offertcontent-location-surface-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.offertcontent-location-surface-container h3 {
+  font-family: "Space Grotesk";
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 66px;
+  letter-spacing: 1.04px;
+}
+
+.offertcontent-location-surface-container p {
+  font-family: "Space Grotesk";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 66px;
+  letter-spacing: 0.72px;
+}
+
+.offertcontent-rooms {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  margin-bottom: 60px;
+}
+
+.offertcontent-room {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.offertcontent-room div {
+  background: #BBC6C9;
+  padding: 6.5px;
+}
+
+.offertcontent-room p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.offertcontent-agent {
+  display: flex;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.offertcontent-agent-content {
+  background: #FFF;
+  box-shadow: 0px 14px 14px 0px rgba(0, 0, 0, 0.04);
+  padding: 16px 20px 16px 58px;
+  max-width: 305px;
+  width: 100%;
+  margin-left: -40px;
+}
+
+.offertcontent-agent-content p:nth-child(1) {
+  color: rgba(9, 54, 66, 0.80);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.offertcontent-agent-content p:nth-child(2) {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.offertcontent-agent-phone {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 22px;
+}
+
+.offertcontent-agent-phone div {
+  display: flex;
+  align-items: center;
+}
+
+.offertcontent-agent-phone div img {
+  margin-right: 8px;
+}
+
+.offertcontent-agent-phone p {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.offertcontent-agent-photo {
+  z-index: 4;
+}
+
+.offertcontent-contact h4 {
+  font-family: "Space Grotesk";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: 0.72px;
+  margin-bottom: 11px;
+}
+
+.offertcontent-contact div {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.offertcontent-contact div input {
+  border-radius: 6px;
+  border: 1px solid rgba(83, 114, 123, 0.50);
+  background: #FFF;
+  color: rgba(9, 54, 66, 0.70);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.32px;
+  padding: 8px 20px;
+  margin-bottom: 16px;
+}
+
+.offertcontent-contact button {
+  outline: none;
+  border: none;
+  background: #093642;
+  color: #F6F6F7;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.32px;
+  text-transform: uppercase;
+  padding: 10px 22px;
+  }

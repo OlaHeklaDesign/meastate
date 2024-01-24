@@ -1,0 +1,23 @@
+.offertpage-slider-content-container {
+  max-width: 1292px;
+  margin: 0 auto;
+  padding-top: 35px;
+  background-image: url('../../Components/Assets/bg-strips.png');
+  background-position: center;
+  background-repeat: repeat-y;
+}
+
+.offertpage-description {
+  max-width: 1292px;
+  margin: 0 auto;
+  padding-bottom: 80px;
+  background-image: url('../../Components/Assets/bg-strips.png');
+  background-position: center;
+  background-repeat: repeat-y;
+}
+
+.offertpage-slider-content-container {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}

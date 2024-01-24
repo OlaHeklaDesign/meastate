@@ -59,7 +59,7 @@ const LatestProperty = () => {
     <div className="latestproperty-slider">
       <div className="latestproperty-slides" style={sliderStyle}>
         {latest_property.map((property, index) => (
-          <OffertItem key={index} offer={property.offer} main_image={property.main_image} location={property.location} surface={property.surface} bedrooms={property.bedrooms} bathrooms={property.bathrooms} parking={property.parking} price={property.price} />
+          <OffertItem key={index} offer={property.offer} main_image={property.main_image} location={property.location} surface={property.surface} bedrooms={property.bedrooms} bathrooms={property.bathrooms} parking={property.parking} price={property.price} id={property.id} additionalImages={property.additionalImages} floorPlan={property.floorPlan} agentId={property.agentId} description={property.description} />
         ))}
       </div>
     </div>
