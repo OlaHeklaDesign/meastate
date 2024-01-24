@@ -3,8 +3,9 @@ import './Contact.css';
 
 
 const Contact = () => {
+
   return (
-    <div class="contact-bg-container">
+    <div class="contact-bg-container" id='contact'>
     <section class="contact">
       <div class="contact-left">
         <h2>Haven't you found your dream home?</h2>

@@ -7,7 +7,7 @@ import safe_icon from '../Assets/safe.svg';
 
 const Offert = () => {
   return (
-  <section class="offert">
+  <section class="offert" id='offert'>
     <h2>Real estate agency you can trust</h2>
     <div class="offert-container">
       <div class="offert-box">

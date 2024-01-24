@@ -144,6 +144,7 @@ import offert23_5 from '../Assets/offerts/offert23/offert23.5.jpg';
 let all_offers = [
   {
     id: 1,
+    market: "primary",
     offer: "rent",
     price: 5000,
     location: "Warsaw, Centrum",
@@ -159,6 +160,7 @@ let all_offers = [
   },
   {
     id: 2,
+    market: "primary",
     offer: "sell",
     price: 450000,
     location: "Warsaw, Centrum",
@@ -174,6 +176,7 @@ let all_offers = [
   },
   {
     id: 3,
+    market: "primary",
     offer: "sell",
     price: 290000,
     location: "Warsaw, Targówek",
@@ -189,6 +192,7 @@ let all_offers = [
   },
   {
     id: 4,
+    market: "primary",
     offer: "sell",
     price: 700000,
     location: "Warsaw, Bródno",
@@ -204,6 +208,7 @@ let all_offers = [
   },
   {
     id: 5,
+    market: "primary",
     offer: "rent",
     price: 3200,
     location: "Warsaw, Bródno",
@@ -219,6 +224,7 @@ let all_offers = [
   },
   {
     id: 6,
+    market: "primary",
     offer: "rent",
     price: 3100,
     location: "Warsaw, Powiśle",
@@ -234,6 +240,7 @@ let all_offers = [
   },
   {
     id: 7,
+    market: "primary",
     offer: "sell",
     price: 500000,
     location: "Warsaw, Praga Południe",
@@ -249,6 +256,7 @@ let all_offers = [
   },
   {
     id: 8,
+    market: "primary",
     offer: "sell",
     price: 400000,
     location: "Warsaw, Mokotów",
@@ -264,6 +272,7 @@ let all_offers = [
   },
   {
     id: 9,
+    market: "primary",
     offer: "rent",
     price: 2100,
     location: "Warsaw, Praga Południe",
@@ -279,6 +288,7 @@ let all_offers = [
   },
   {
     id: 10,
+    market: "primary",
     offer: "sell",
     price: 320000,
     location: "Warsaw, Bemowo",
@@ -294,6 +304,7 @@ let all_offers = [
   },
   {
     id: 11,
+    market: "primary",
     offer: "sell",
     price: 430000,
     location: "Warsaw, Ursynów",
@@ -309,6 +320,7 @@ let all_offers = [
   },
   {
     id: 12,
+    market: "primary",
     offer: "sell",
     price: 9000000,
     location: "Warsaw, Mokotów",
@@ -324,6 +336,7 @@ let all_offers = [
   },
   {
     id: 13,
+    market: "primary",
     offer: "rent",
     price: 2100,
     location: "Warsaw, Tarchomin",
@@ -339,6 +352,7 @@ let all_offers = [
   },
   {
     id: 14,
+    market: "primary",
     offer: "sell",
     price: 650000,
     location: "Warsaw, Ursynów",
@@ -354,6 +368,7 @@ let all_offers = [
   },
   {
     id: 15,
+    market: "primary",
     offer: "sell",
     price: 600000,
     location: "Warsaw, Białołęka",
@@ -369,6 +384,7 @@ let all_offers = [
   },
   {
     id: 16,
+    market: "primary",
     offer: "rent",
     price: 4000,
     location: "Warsaw, Centrum",
@@ -384,6 +400,7 @@ let all_offers = [
   },
   {
     id: 17,
+    market: "primary",
     offer: "sell",
     price: 2100000,
     location: "Warsaw, Powiśle",
@@ -399,6 +416,7 @@ let all_offers = [
   },
   {
     id: 18,
+    market: "primary",
     offer: "rent",
     price: 2300,
     location: "Warsaw, Ursus",
@@ -414,6 +432,7 @@ let all_offers = [
   },
   {
     id: 19,
+    market: "primary",
     offer: "rent",
     price: 3200,
     location: "Warsaw, Praga Południe",
@@ -429,6 +448,7 @@ let all_offers = [
   },
   {
     id: 20,
+    market: "primary",
     offer: "sell",
     price: 330050,
     location: "Warsaw, Powiśle",
@@ -444,6 +464,7 @@ let all_offers = [
   },
   {
     id: 21,
+    market: "primary",
     offer: "sell",
     price: 899000,
     location: "Warsaw, Targówek",
@@ -459,6 +480,7 @@ let all_offers = [
   },
   {
     id: 22,
+    market: "primary",
     offer: "sell",
     price: 546000,
     location: "Warsaw, Żerań",
@@ -474,6 +496,7 @@ let all_offers = [
   },
   {
     id: 23,
+    market: "primary",
     offer: "sell",
     price: 1199000,
     location: "Warsaw, Targówek",

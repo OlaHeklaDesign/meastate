@@ -22,11 +22,16 @@
   gap: 110px;
 }
 
-.searchbar-offer-box {
+.searchbar-offer-box div {
   display: flex;
   align-items: center;
   gap: 36px;
 }
+
+.searchbar-offer-box {
+  position: relative;
+}
+
 
 .searchbar-location-box input {
   outline: none;
@@ -34,18 +39,19 @@
   background: transparent;
 }
 
-.searchbar-surface-box div,
-.searchbar-market-box div,
-.searchbar-price-box div {
+.searchbar-surface-box div div,
+.searchbar-market-box div div,
+.searchbar-price-box div div {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
 }
 
-.searchbar-surface-box div p,
-.searchbar-market-box div p,
-.searchbar-price-box div p {
+.searchbar-surface-box div div p,
+.searchbar-market-box div div p,
+.searchbar-price-box div div p {
   color: rgba(9, 54, 66, 0.70);
   font-size: 12px;
   font-weight: 300;
@@ -53,13 +59,26 @@
   text-transform: uppercase;
 }
 
+.searchbar-surface-box div,
 .searchbar-location-box,
-.searchbar-surface-box,
-.searchbar-market-box,
-.searchbar-price-box {
+.searchbar-market-box div,
+.searchbar-price-box div {
   display: flex;
   flex-direction: column;
   gap: 4px;
+  align-items: start;
+}
+
+.searchbar-surface-box {
+  position: relative;
+}
+
+.searchbar-market-box {
+  position: relative;
+}
+
+.searchbar-price-box {
+  position: relative;
 }
 
 .searchbar button {
@@ -72,4 +91,94 @@
   padding: 10px 22px;
   border: none;
   outline: none;
+}
+
+.searchbar-offer-select {
+  position: absolute;
+  top: 150%;
+  left: 0;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: #F6F6F7;
+  border: 1px solid #093642;
+  padding: 6px 16px;
+}
+
+.searchbar-offer-box li {
+  list-style: none;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0.32px;
+  text-transform: uppercase;
+}
+
+.searchbar-select-surface {
+  position: absolute;
+  top: 120%;
+  left: 0;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: #F6F6F7;
+  border: 1px solid #093642;
+  padding: 6px 16px;
+}
+
+.searchbar-select-surface input {
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.32px;
+  text-transform: uppercase;
+  width: 100%;
+  padding: 4px 8px;
+  background: transparent;
+  outline: none;
+  border: 1px solid #093642;
+}
+
+.searchbar-market-box ul {
+  position: absolute;
+  top: 120%;
+  left: 0;
+  width: 140px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: #F6F6F7;
+  border: 1px solid #093642;
+  padding: 6px 16px;
+}
+
+.searchbar-market-box li {
+  list-style: none;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0.32px;
+  text-transform: uppercase;
+}
+
+.search-price-inputs {
+  width: 100%;
+  padding: 4px 8px;
+  background: transparent;
+  outline: none;
+  border: 1px solid #093642;
+  position: absolute;
+  top: 120%;
+  left: 0;
+}
+
+.search-price-inputs input {
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.32px;
+  text-transform: uppercase;
+  width: 100%;
+  padding: 4px 8px;
+  background: transparent;
+  outline: none;
+  border: 1px solid #093642;
 }
