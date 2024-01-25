@@ -5,11 +5,18 @@ import bathroom_icon from '../Assets/bathroom.svg';
 import parking_icon from '../Assets/parking.svg';
 import phone_icon from '../Assets/offer-phone.svg';
 import arrow_icon from '../Assets/arrow-offer.svg';
-import agent from '../Assets/agentimg.png';
+import all_agents from '../Assets/all_agents';
+
 
 const OffertContent = (props) => {
 
   const {property} = props;
+
+  const getAgentInfo = (agentId) => {
+    return all_agents.find(agent => agent.id === agentId);
+  }
+
+  const agentInfo = getAgentInfo(property.agentId);
 
   return (
     <div className='offertcontent'>
@@ -38,14 +45,14 @@ const OffertContent = (props) => {
         </div>
       </div>
       <div className="offertcontent-agent">
-        <img src={agent} alt="" className='offertcontent-agent-photo' />
+        <img src={agentInfo.agentImage} alt="" className='offertcontent-agent-photo' />
         <div className="offertcontent-agent-content">
           <p>Real Estate Agent</p>
-          <p>Johanna Walczyk</p>
+          <p>{agentInfo.agentName}</p>
           <div className="offertcontent-agent-phone">
             <div>
               <img src={phone_icon} alt="phone icon" />
-              <p>+54 657 3453 23</p>
+              <p>{agentInfo.agentPhoneNumber}</p>
             </div>
             <img src={arrow_icon} alt="arrow icon" />
           </div>

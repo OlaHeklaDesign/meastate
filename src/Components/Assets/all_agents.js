@@ -4,7 +4,7 @@ import Emily_Mitchell from './agents/Emily-Mitchell.png'
 import Peter_Kowal from './agents/Peter-Kowal.png'
 
 
-let all_offers = [
+let all_agents = [
   {
     id: 1,
     agentImage: Mitchell_Anderson,
@@ -30,3 +30,5 @@ let all_offers = [
     agentPhoneNumber: "+45 833 13 848",
   },
 ]
+
+export default all_agents
