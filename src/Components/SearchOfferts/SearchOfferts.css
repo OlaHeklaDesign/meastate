@@ -4,6 +4,12 @@
   padding-bottom: 40px;
 }
 
+.searchofferts-firstline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .searchofferts h2 {
   font-family: "Space Grotesk";
   font-size: 40px;
@@ -26,4 +32,50 @@
   width: 100%;
   gap: 20px;
   margin-right: -20px;
+}
+
+.searchofferts-sort-container {
+  position: relative;
+}
+
+.searchofferts-sort-container div {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 6px 16px;
+  border: 1px solid rgba(9, 54, 66, 0.70);
+}
+
+.searchofferts-sort-container div p {
+  color: rgba(9, 54, 66, 0.70);
+  font-weight: 300;
+  letter-spacing: 0.32px;
+  text-transform: uppercase;
+}
+
+.searchofferts-sort-container ul {
+  position: absolute;
+  width: 120px;
+  top: 110%;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: #F6F6F7;
+  border: 1px solid #093642;
+  padding: 6px 16px;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.searchofferts-sort-container li {
+  list-style: none;
+}
+
+.searchofferts-sort-container input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
