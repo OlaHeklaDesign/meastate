@@ -1,0 +1,123 @@
+.herosearchbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #FFF;
+  filter: drop-shadow(0px 14px 14px rgba(0, 0, 0, 0.04));
+  padding: 26px;
+  z-index: 4;
+  position: relative;
+  margin-top: 74px;
+}
+
+.herosearchbar-offer-container div,
+.herosearchbar-market-container div div,
+.herosearchbar-price-container div div {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  position: relative;
+}
+
+.herosearchbar-title {
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0.32px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.herosearchbar-offer-container p {
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0.32px;
+  text-transform: uppercase;
+}
+
+.herosearchbar-seletor-title {
+  color: rgba(9, 54, 66, 0.70);
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 0.24px;
+  text-transform: uppercase;
+}
+
+.herosearchbar-location-container input {
+  color: rgba(9, 54, 66, 0.70);
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 0.24px;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 0;
+}
+
+.herosearchbar-location-container input::placeholder {
+  color: rgba(9, 54, 66, 0.70);
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 0.24px;
+  text-transform: uppercase;
+}
+
+.herosearchbar button {
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.32px;
+  text-transform: uppercase;
+  padding: 10px 22px;
+  background: #093642;
+  border: none;
+  outline: none;
+}
+
+
+
+
+
+
+
+.herosearchbar ul {
+  position: absolute;
+  top: 80%;
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: #F6F6F7;
+  border: 1px solid #093642;
+  padding: 6px 16px;
+}
+
+.herosearchbar ul li {
+  list-style: none;
+}
+
+.herosearchbar ul li input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.herosearchbar ul li label {
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 0.24px;
+  text-transform: uppercase;
+}
+
+.herosearchbar-price-container input {
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 0.32px;
+  text-transform: uppercase;
+  width: 100%;
+  padding: 4px 8px;
+  background: transparent;
+  outline: none;
+  border: 1px solid #093642;
+}
+

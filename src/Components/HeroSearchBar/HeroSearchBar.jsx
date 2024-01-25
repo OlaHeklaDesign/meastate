@@ -16,63 +16,61 @@ const HeroSearchBar = () => {
           <li>
             <label>
               <input type="radio" />
-              "Rent"
+              Rent
             </label>
           </li>
           <li>
             <label>
               <input type="radio" />
-              "Buy"
+              Buy
             </label>
           </li>
         </ul>
       </div>
       <div className="herosearchbar-location-container">
-        <p>Location</p>
+        <p className='herosearchbar-title'>Location</p>
         <input type="text" placeholder='Warsaw' />
       </div>
       <div className="herosearchbar-market-container">
         <div>
-        <p>Market</p>
-        <div>
-          <p>Primary</p>
-          <img src={arrow} alt="arrow" />
-        </div>
+          <p className='herosearchbar-title'>Market</p>
+          <div>
+            <p className='herosearchbar-seletor-title'>Primary</p>
+            <img src={arrow} alt="arrow" />
+          </div>
         </div>
         <ul>
           <li>
             <label>
               <input type="radio" />
-              "Primary"
+              Primary
             </label>
           </li>
           <li>
             <label>
               <input type="radio" />
-              "Secondary"
+              Secondary
             </label>
           </li>
         </ul>
       </div>
       <div className="herosearchbar-price-container">
         <div>
-          <p>Price</p>
+          <p className='herosearchbar-title'>Price</p>
           <div>
-            <p>400K - 700K</p>
+            <p className='herosearchbar-seletor-title'>400K - 700K</p>
             <img src={arrow} alt="" />
           </div>
         </div>
         <ul>
           <li>
             <label>
-              <input type="text" />
-              400K
+              <input type="text" placeholder='400K' />
             </label>
           </li>
           <li>
             <label>
-              <input type="text" />
-              700K
+              <input type="text" placeholder='700K' />
             </label>
           </li>
         </ul>
