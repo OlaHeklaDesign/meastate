@@ -1,6 +1,7 @@
 import React from 'react';
 import './Hero.css';
 import hero_img from '../Assets/hero-img.png';
+import HeroSearchBar from '../HeroSearchBar/HeroSearchBar';
 
 
 
@@ -21,6 +22,7 @@ const Hero = () => {
               <h1>it can't get any simpler</h1>
             </div>
             <p class="hero-left-description">Find your dream apartment or home with us. We create a space where dreams of the perfect place become reality</p>
+            <HeroSearchBar />
           </div>
           <div class="hero-left-bottom">
             <div>
