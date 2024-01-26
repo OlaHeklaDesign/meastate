@@ -1,9 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './SearchOfferts.css';
 import OffertItem from '../OffertItem/OffertItem';
 import arrow from '../Assets/arrow-searchbar.svg';
 
-const SearchOfferts = ({ filteredOffers }) => {
+
+  const SearchOfferts = ({ filteredOffers }) => {
+    const [sortingOption, setSortingOption] = useState(null);
+  
+    const handleSortChange = (event) => {
+      setSortingOption(event.target.value);
+      console.log(`Kliknięto: ${event.target.value}`);
+    };
+  
+    const sortOffers = (offers) => {
+      if (sortingOption === 'price-desc') {
+        return offers.slice().sort((a, b) => b.price - a.price);
+      } else if (sortingOption === 'price-asc') {
+        return offers.slice().sort((a, b) => a.price - b.price);
+      } else if (sortingOption === 'surface-desc') {
+        return offers.slice().sort((a, b) => b.surface - a.surface);
+      } else if (sortingOption === 'surface-asc') {
+        return offers.slice().sort((a, b) => a.surface - b.surface);
+      } else {
+        // Jeśli brak opcji sortowania, zwróć oferty bez zmian.
+        return offers;
+      }
+    };
+  
+    const sortedOffers = sortOffers(filteredOffers);
+
   return (
     <div className='searchofferts'>
       <div className="searchofferts-firstline">
@@ -19,25 +44,41 @@ const SearchOfferts = ({ filteredOffers }) => {
           <ul>
             <li>
               <label>
-                <input type="radio" />
+                <input  type="radio"
+                        name="sortOption"
+                        value="price-desc"
+                        checked={sortingOption === "price-desc"}
+                        onChange={handleSortChange} />
                 price descending
               </label>
             </li>
             <li>
               <label>
-                <input type="radio" />
+                <input  type="radio"
+                        name="sortOption"
+                        value="price-asc"
+                        checked={sortingOption === "price-asc"}
+                        onChange={handleSortChange} />
                 price ascending
               </label>
             </li>
             <li>
               <label>
-                <input type="radio" />
+                <input  type="radio"
+                        name="sortOption"
+                        value="surface-desc"
+                        checked={sortingOption === "surface-desc"}
+                        onChange={handleSortChange} />
                 surface descending
               </label>
             </li>
             <li>
               <label>
-                <input type="radio" />
+                <input  type="radio"
+                        name="sortOption"
+                        value="surface-asc"
+                        checked={sortingOption === "surface-asc"}
+                        onChange={handleSortChange} />
                 surface ascending
               </label>
             </li>
@@ -45,7 +86,7 @@ const SearchOfferts = ({ filteredOffers }) => {
         </div>
       </div>
       <div className="searchpage-offerts">
-        {filteredOffers.map((property, index) => (
+        {sortedOffers.map((property, index) => (
           <OffertItem
             key={index}
             offer={property.offer}

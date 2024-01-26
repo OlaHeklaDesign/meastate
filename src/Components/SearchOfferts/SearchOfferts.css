@@ -79,3 +79,8 @@
   -webkit-appearance: none;
   -moz-appearance: none;
 }
+
+
+.searchofferts:checked {
+  font-weight: bold;
+}
