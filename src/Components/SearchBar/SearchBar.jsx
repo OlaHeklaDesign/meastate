@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import './SearchBar.css';
 import arrow from '../Assets/arrow-searchbar.svg';
+import { SearchContext } from '../../Context/SearchContext/SearchContext';
 
 
-const SearchBar = ({ filters, onFilterChange, onSearch }) => {
+const SearchBar = () => {
 
-  const [selectedService, setSelectedService] = useState('');
+  const {onFilterChange, onSearch} = useContext(SearchContext);
+
 
   return (
     <div className='searchbar'>
@@ -20,11 +22,7 @@ const SearchBar = ({ filters, onFilterChange, onSearch }) => {
               <input  type="radio"
                       name="service"
                       value="rent"
-                      checked={selectedService === 'rent'}
-                      onChange={() => {
-                        setSelectedService('rent');
-                        onFilterChange({ target: { name: 'service', value: 'rent' } });
-                      }} />
+                      onChange={() => onFilterChange({ target: { name: 'service', value: 'rent' }})}/>
               Rent
             </label>
           </li>
@@ -33,11 +31,7 @@ const SearchBar = ({ filters, onFilterChange, onSearch }) => {
               <input  type="radio"
                       name="service"
                       value="sell"
-                      checked={selectedService === 'sell'}
-                      onChange={() => {
-                        setSelectedService('sell');
-                        onFilterChange({ target: { name: 'service', value: 'sell' } });
-                      }} />
+                      onChange={() => onFilterChange({ target: { name: 'service', value: 'sell' }})}/>
               Buy
             </label>
           </li>
@@ -45,7 +39,7 @@ const SearchBar = ({ filters, onFilterChange, onSearch }) => {
       </div>
       <div className="searchbar-location-container">
         <p className='searchbar-title'>Location</p>
-        <input type="text" name="location" placeholder='Warsaw' value={filters.location} onChange={onFilterChange} />
+        <input type="text" name="location" placeholder='Warsaw'   onChange={(e) => onFilterChange({ target: { name: 'location', value: e.target.value } })}/> 
       </div>
       <div className="searchbar-surface-container">
         <div>
@@ -61,8 +55,7 @@ const SearchBar = ({ filters, onFilterChange, onSearch }) => {
               <input  type="text"
                       name="minSurface"
                       placeholder='from'
-                      value={filters.minSurface}
-                      onChange={onFilterChange} />
+                      onChange={(e) => onFilterChange({ target: { name: 'minSurface', value: e.target.value } })}/> 
             </label>
           </li>
           <li>
@@ -70,8 +63,7 @@ const SearchBar = ({ filters, onFilterChange, onSearch }) => {
               <input  type="text"
                       name="maxSurface"
                       placeholder='to'
-                      value={filters.maxSurface}
-                      onChange={onFilterChange} />
+                      onChange={(e) => onFilterChange({ target: { name: 'maxSurface', value: e.target.value } })}/> 
             </label>
           </li>
         </ul>
@@ -90,8 +82,7 @@ const SearchBar = ({ filters, onFilterChange, onSearch }) => {
               <input  type="radio"
                       name="market"
                       value="primary"
-                      checked={filters.market === 'primary'}
-                      onChange={onFilterChange} />
+                      onChange={(e) => onFilterChange({ target: { name: 'market', value: 'primary' } })} />
               Primary
             </label>
           </li>
@@ -100,8 +91,8 @@ const SearchBar = ({ filters, onFilterChange, onSearch }) => {
               <input  type="radio"
                       name="market"
                       value="secondary"
-                      checked={filters.market === 'secondary'}
-                      onChange={onFilterChange} />
+                      onChange={(e) => onFilterChange({ target: { name: 'market', value: 'secondary' } })} />
+
               Secondary
             </label>
           </li>
@@ -121,8 +112,7 @@ const SearchBar = ({ filters, onFilterChange, onSearch }) => {
               <input  type="text"
                       name="minPrice"
                       placeholder='from'
-                      value={filters.minPrice}
-                      onChange={onFilterChange} />
+                      onChange={(e) => onFilterChange({ target: { name: 'minPrice', value: e.target.value } })}/> 
             </label>
           </li>
           <li>
@@ -130,8 +120,7 @@ const SearchBar = ({ filters, onFilterChange, onSearch }) => {
               <input  type="text"
                       name="maxPrice"
                       placeholder='to'
-                      value={filters.maxPrice}
-                      onChange={onFilterChange} />
+                      onChange={(e) => onFilterChange({ target: { name: 'maxPrice', value: e.target.value } })}/> 
             </label>
           </li>
         </ul>

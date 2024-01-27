@@ -7,7 +7,9 @@ import TestimonialHero from '../Components/TestimonialHero/TestimonialHero';
 import LatestProperty from '../Components/LatestProperty/LatestProperty';
 import TextBg from '../Components/TextBg/TextBg';
 
+
 const HomePage = () => {
+
   return (
     <div className='homepage'>
       <Hero />

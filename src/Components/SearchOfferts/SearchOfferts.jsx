@@ -1,10 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import './SearchOfferts.css';
 import OffertItem from '../OffertItem/OffertItem';
 import arrow from '../Assets/arrow-searchbar.svg';
+import { SearchContext } from '../../Context/SearchContext/SearchContext';
 
 
-  const SearchOfferts = ({ filteredOffers }) => {
+  const SearchOfferts = () => {
+
+    const {filteredOffers} = useContext(SearchContext);
+
+
     const [sortingOption, setSortingOption] = useState(null);
   
     const handleSortChange = (event) => {
@@ -22,7 +27,6 @@ import arrow from '../Assets/arrow-searchbar.svg';
       } else if (sortingOption === 'surface-asc') {
         return offers.slice().sort((a, b) => a.surface - b.surface);
       } else {
-        // Jeśli brak opcji sortowania, zwróć oferty bez zmian.
         return offers;
       }
     };
@@ -34,7 +38,7 @@ import arrow from '../Assets/arrow-searchbar.svg';
       <div className="searchofferts-firstline">
         <div className="searchofferts-title-count">
           <h2>Search property</h2>
-          <p className='searchofferts-resultcount'>{filteredOffers.length} results</p>
+          <p className='searchofferts-resultcount'>{sortedOffers.length} results</p>
         </div>
         <div className="searchofferts-sort-container">
           <div>
