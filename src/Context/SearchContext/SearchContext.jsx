@@ -68,7 +68,7 @@ const SearchContextProvider = (props) => {
   };
   
   
-  const contextValue = {setFilteredOffers, setFilters, onSearch, onFilterChange, filteredOffers};
+  const contextValue = {setFilteredOffers, setFilters, onSearch, onFilterChange, filteredOffers, filters};
 
   
 

@@ -6,7 +6,7 @@ import { SearchContext } from '../../Context/SearchContext/SearchContext';
 
 const SearchBar = () => {
 
-  const {onFilterChange, onSearch} = useContext(SearchContext);
+  const {onFilterChange, onSearch, filters} = useContext(SearchContext);
 
   const [dropdownServiceOpen, setDropdownServiceOpen] = useState(false);
 
@@ -61,13 +61,13 @@ const SearchBar = () => {
     <div className='searchbar'>
       <div className="searchbar-offer-container">
         <div onClick={() => {setDropdownServiceOpen(!dropdownServiceOpen)}} ref= {searchItemServiceRef}>
-          <p>buy</p>
+          <p>{filters.service}</p>
           <img src={arrow} alt="arrow" />
         </div>
         {dropdownServiceOpen &&
         <ul>
           <li>
-            <label ref={dropdownServiceRentRef}>
+            <label ref={dropdownServiceRentRef} className={filters.service === "rent" ? 'selected' : ''}>
               <input  type="radio"
                       name="service"
                       value="rent"
@@ -76,7 +76,7 @@ const SearchBar = () => {
             </label>
           </li>
           <li>
-            <label ref={dropdownServiceSellRef}>
+            <label ref={dropdownServiceSellRef} className={filters.service === "sell" ? 'selected' : ''}>
               <input  type="radio"
                       name="service"
                       value="sell"
@@ -88,13 +88,21 @@ const SearchBar = () => {
       </div>
       <div className="searchbar-location-container">
         <p className='searchbar-title'>Location</p>
-        <input type="text" name="location" placeholder='Warsaw'   onChange={(e) => onFilterChange({ target: { name: 'location', value: e.target.value } })}/> 
+        <input type="text" name="location" placeholder={filters.location}   onChange={(e) => onFilterChange({ target: { name: 'location', value: e.target.value } })}/> 
       </div>
       <div className="searchbar-surface-container">
         <div>
           <p className='searchbar-title'>Surface Footage</p>
           <div onClick={() => {setDropdownSurfaceOpen(!dropdownSurfaceOpen)}} ref= {searchItemSurfaceRef}>
-            <p className='searchbar-seletor-title'>40SQFT-70SQFT</p>
+            <p className='searchbar-seletor-title'>
+            {filters.minSurface && filters.maxSurface
+            ? `${filters.minSurface}SQFT-${filters.maxSurface}SQFT`
+            : !filters.minSurface && filters.maxSurface
+            ? `TO ${filters.maxSurface}SQFT`
+            : filters.minSurface && !filters.maxSurface
+            ? `FROM ${filters.minSurface}SQFT`
+            : '40SQFT-70SQFT'}
+            </p>
             <img src={arrow} alt="" />
           </div>
         </div>
@@ -124,14 +132,14 @@ const SearchBar = () => {
         <div>
           <p className='searchbar-title'>Market</p>
           <div onClick={() => {setDropdownMarketOpen(!dropdownMarketOpen)}} ref= {searchItemMarketRef}>
-            <p className='searchbar-seletor-title'>Primary</p>
+            <p className='searchbar-seletor-title'>{filters.market}</p>
             <img src={arrow} alt="arrow" />
           </div>
         </div>
         {dropdownMarketOpen &&
         <ul>
           <li>
-            <label ref={dropdownMarketPrimaryRef}>
+            <label ref={dropdownMarketPrimaryRef} className={filters.market === "primary" ? 'selected' : ''}>
               <input  type="radio"
                       name="market"
                       value="primary"
@@ -140,7 +148,7 @@ const SearchBar = () => {
             </label>
           </li>
           <li>
-            <label ref={dropdownMarketSecondaryRef}>
+            <label ref={dropdownMarketSecondaryRef} className={filters.market === "secondary" ? 'selected' : ''}>
               <input  type="radio"
                       name="market"
                       value="secondary"
@@ -155,7 +163,15 @@ const SearchBar = () => {
         <div>
           <p className='searchbar-title'>Price</p>
           <div onClick={() => {setDropdownPriceOpen(!dropdownPriceOpen)}} ref= {searchItemPriceRef}>
-            <p className='searchbar-seletor-title'>400K - 700K</p>
+            <p className='searchbar-seletor-title'>
+            {filters.minPrice && filters.maxPrice
+            ? `${filters.minPrice}$-${filters.maxPrice}$`
+            : !filters.minPrice && filters.maxPrice
+            ? `TO ${filters.maxPrice}$`
+            : filters.minPrice && !filters.maxPrice
+            ? `FROM ${filters.minPrice}$`
+            : 'Choose price range'}
+            </p>
             <img src={arrow} alt="" />
           </div>
         </div>

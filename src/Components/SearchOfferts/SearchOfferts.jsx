@@ -69,7 +69,7 @@ import { SearchContext } from '../../Context/SearchContext/SearchContext';
           {dropdownSortOpen &&
           <ul ref={dropdownSortRef}>
             <li>
-              <label ref= {pricedecRef}>
+              <label ref= {pricedecRef} className={sortingOption === "price-desc" ? 'selected' : ''}>
                 <input  type="radio"
                         name="sortOption"
                         value="price-desc"
@@ -80,7 +80,7 @@ import { SearchContext } from '../../Context/SearchContext/SearchContext';
               </label>
             </li>
             <li>
-              <label ref= {priceascRef}>
+              <label ref= {priceascRef} className={sortingOption === "price-asc" ? 'selected' : ''}>
                 <input  type="radio"
                         name="sortOption"
                         value="price-asc"
@@ -91,7 +91,7 @@ import { SearchContext } from '../../Context/SearchContext/SearchContext';
               </label>
             </li>
             <li>
-              <label ref= {surfacedecRef}>
+              <label ref= {surfacedecRef} className={sortingOption === "surface-desc" ? 'selected' : ''}>
                 <input  type="radio"
                         name="sortOption"
                         value="surface-desc"
@@ -102,7 +102,7 @@ import { SearchContext } from '../../Context/SearchContext/SearchContext';
               </label>
             </li>
             <li>
-              <label ref= {surfaceascRef}>
+              <label ref= {surfaceascRef} className={sortingOption === "surface-asc" ? 'selected' : ''}>
                 <input  type="radio"
                         name="sortOption"
                         value="surface-asc"

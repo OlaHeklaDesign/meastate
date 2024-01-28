@@ -84,3 +84,7 @@
 .searchofferts:checked {
   font-weight: bold;
 }
+
+.selected {
+  font-weight: bold;
+}

@@ -57,13 +57,13 @@ const HeroSearchBar = () => {
     <div className='herosearchbar'>
       <div className="herosearchbar-offer-container">
         <div onClick={() => {setDropdownServiceOpen(!dropdownServiceOpen)}} ref= {searchItemServiceRef}>
-          <p>buy</p>
+          <p>{filters.service}</p>
           <img src={arrow} alt="arrow" />
         </div>
         {dropdownServiceOpen &&
         <ul>
           <li>
-            <label ref= {dropdownServiceRentRef}>
+            <label ref= {dropdownServiceRentRef} className={filters.service === "rent" ? 'selected' : ''}>
             <input    type="radio"
                       name="service"
                       value="rent"
@@ -73,7 +73,7 @@ const HeroSearchBar = () => {
             </label>
           </li>
           <li>
-            <label ref= {dropdownServiceSellRef}>
+            <label ref= {dropdownServiceSellRef} className={filters.service === "sell" ? 'selected' : ''}>
             <input    type="radio"
                       name="service"
                       value="sell"
@@ -92,14 +92,14 @@ const HeroSearchBar = () => {
         <div>
           <p className='herosearchbar-title'>Market</p>
           <div onClick={() => {setDropdownMarketOpen(!dropdownMarketOpen)}} ref= {searchItemMarketRef}>
-            <p className='herosearchbar-seletor-title'>Primary</p>
+            <p className='herosearchbar-seletor-title'>{filters.market}</p>
             <img src={arrow} alt="arrow" />
           </div>
         </div>
         {dropdownMarketOpen &&
         <ul>
           <li>
-            <label ref={dropdownMarketPrimaryRef}>
+            <label ref={dropdownMarketPrimaryRef} className={filters.market === "primary" ? 'selected' : ''}>
             <input    type="radio"
                       name="market"
                       value="primary"
@@ -109,7 +109,7 @@ const HeroSearchBar = () => {
             </label>
           </li>
           <li>
-            <label ref={dropdownMarketSecondaryRef}>
+            <label ref={dropdownMarketSecondaryRef} className={filters.market === "secondary" ? 'selected' : ''}>
             <input    type="radio"
                       name="market"
                       value="secondary"
@@ -124,7 +124,15 @@ const HeroSearchBar = () => {
         <div>
           <p className='herosearchbar-title'>Price</p>
           <div onClick={() => {setDropdownPriceOpen(!dropdownPriceOpen)}} ref= {searchItemPriceRef}>
-            <p className='herosearchbar-seletor-title'>400K - 700K</p>
+            <p className='herosearchbar-seletor-title'>
+            {filters.minPrice && filters.maxPrice
+            ? `${filters.minPrice}$-${filters.maxPrice}$`
+            : !filters.minPrice && filters.maxPrice
+            ? `TO ${filters.maxPrice}$`
+            : filters.minPrice && !filters.maxPrice
+            ? `FROM ${filters.minPrice}$`
+            : 'price range'}
+            </p>
             <img src={arrow} alt="" />
           </div>
         </div>
