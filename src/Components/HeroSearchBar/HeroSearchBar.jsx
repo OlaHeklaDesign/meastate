@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useRef, useState } from 'react';
 import './HeroSearchBar.css';
 import arrow from '../Assets/arrow-searchbar.svg';
 import { SearchContext } from '../../Context/SearchContext/SearchContext';
@@ -17,20 +17,56 @@ const HeroSearchBar = () => {
     navigate('/search');
   };
 
+  const [dropdownServiceOpen, setDropdownServiceOpen] = useState(false);
+
+  const dropdownServiceRef = useRef();
+  const searchItemServiceRef = useRef();
+
+  window.addEventListener('click', (e) => {
+    if(e.target !== dropdownServiceRef.current && e.target !== searchItemServiceRef.current) {
+      setDropdownServiceOpen(false);
+    }
+  })
+
+  const [dropdownMarketOpen, setDropdownMarketOpen] = useState(false);
+
+  const dropdownMarketRef = useRef();
+  const searchItemMarketRef = useRef();
+
+  window.addEventListener('click', (e) => {
+    if(e.target !== dropdownMarketRef.current && e.target !== searchItemMarketRef.current) {
+      setDropdownMarketOpen(false);
+    }
+  })
+
+  const [dropdownPriceOpen, setDropdownPriceOpen] = useState(false);
+
+  const searchItemPriceRef = useRef();
+  const minpriceInputRef = useRef();
+  const maxpriceInputRef = useRef();
+
+  window.addEventListener('click', (e) => {
+    if(e.target !== searchItemPriceRef.current && e.target !== minpriceInputRef.current && e.target !== maxpriceInputRef.current ) {
+      setDropdownPriceOpen(false);
+    }
+  })
+
   return (
     <div className='herosearchbar'>
       <div className="herosearchbar-offer-container">
-        <div>
+        <div onClick={() => {setDropdownServiceOpen(!dropdownServiceOpen)}} ref= {searchItemServiceRef}>
           <p>buy</p>
           <img src={arrow} alt="arrow" />
         </div>
-        <ul>
+        {dropdownServiceOpen &&
+        <ul ref= {dropdownServiceRef}>
           <li>
             <label>
             <input    type="radio"
                       name="service"
                       value="rent"
-                      onChange={() => onFilterChange({ target: { name: 'service', value: 'rent' }})}/>
+                      onChange={() => onFilterChange({ target: { name: 'service', value: 'rent' }})}
+                      onClick={() => setDropdownServiceOpen(false)}/>
               Rent
             </label>
           </li>
@@ -39,11 +75,12 @@ const HeroSearchBar = () => {
             <input    type="radio"
                       name="service"
                       value="sell"
-                      onChange={() => onFilterChange({ target: { name: 'service', value: 'sell' }})}/>
+                      onChange={() => onFilterChange({ target: { name: 'service', value: 'sell' }})}
+                      onClick={() => setDropdownServiceOpen(false)}/>
               Buy
             </label>
           </li>
-        </ul>
+        </ul>}
       </div>
       <div className="herosearchbar-location-container">
         <p className='herosearchbar-title'>Location</p>
@@ -52,18 +89,20 @@ const HeroSearchBar = () => {
       <div className="herosearchbar-market-container">
         <div>
           <p className='herosearchbar-title'>Market</p>
-          <div>
+          <div onClick={() => {setDropdownMarketOpen(!dropdownMarketOpen)}} ref= {searchItemMarketRef}>
             <p className='herosearchbar-seletor-title'>Primary</p>
             <img src={arrow} alt="arrow" />
           </div>
         </div>
-        <ul>
+        {dropdownMarketOpen &&
+        <ul ref= {dropdownMarketRef}>
           <li>
             <label>
             <input    type="radio"
                       name="market"
                       value="primary"
-                      onChange={() => onFilterChange({ target: { name: 'market', value: 'primary' }})}/>
+                      onChange={() => onFilterChange({ target: { name: 'market', value: 'primary' }})}
+                      onClick={() => setDropdownMarketOpen(false)}/>
               Primary
             </label>
           </li>
@@ -72,27 +111,30 @@ const HeroSearchBar = () => {
             <input    type="radio"
                       name="market"
                       value="secondary"
-                      onChange={() => onFilterChange({ target: { name: 'market', value: 'secondary' }})}/>
+                      onChange={() => onFilterChange({ target: { name: 'market', value: 'secondary' }})}
+                      onClick={() => setDropdownMarketOpen(false)}/>
               Secondary
             </label>
           </li>
-        </ul>
+        </ul>}
       </div>
       <div className="herosearchbar-price-container">
         <div>
           <p className='herosearchbar-title'>Price</p>
-          <div>
+          <div onClick={() => {setDropdownPriceOpen(!dropdownPriceOpen)}} ref= {searchItemPriceRef}>
             <p className='herosearchbar-seletor-title'>400K - 700K</p>
             <img src={arrow} alt="" />
           </div>
         </div>
+        {dropdownPriceOpen &&
         <ul>
           <li>
             <label>
             <input    type="text"
                       name="minPrice"
                       placeholder='from'
-                      onChange={(e) => onFilterChange({ target: { name: 'minPrice', value: e.target.value } })}/>            
+                      ref= {minpriceInputRef}
+                      onChange={(e) => onFilterChange({ target: { name: 'minPrice', value: e.target.value } })}/>           
             </label>
           </li>
           <li>
@@ -100,10 +142,11 @@ const HeroSearchBar = () => {
             <input    type="text"
                       name="maxPrice"
                       placeholder='to'
+                      ref= {maxpriceInputRef}
                       onChange={(e) => onFilterChange({ target: { name: 'maxPrice', value: e.target.value } })}/>
             </label>
           </li>
-        </ul>
+        </ul>}
       </div>
       <button onClick={handleSearchFromHero}>search</button>
     </div>
