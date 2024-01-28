@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useRef } from 'react';
 import './SearchOfferts.css';
 import OffertItem from '../OffertItem/OffertItem';
 import arrow from '../Assets/arrow-searchbar.svg';
@@ -33,6 +33,27 @@ import { SearchContext } from '../../Context/SearchContext/SearchContext';
   
     const sortedOffers = sortOffers(filteredOffers);
 
+    const [dropdownSortOpen, setDropdownSortOpen] = useState(false);
+
+    const dropdownSortRef = useRef();
+    const searchItemSortRef = useRef();
+    const pricedecRef = useRef();
+    const priceascRef = useRef();
+    const surfacedecRef = useRef();
+    const surfaceascRef = useRef();
+
+
+    window.addEventListener('click', (e) => {
+      if(e.target !== dropdownSortRef.current 
+        && e.target !== searchItemSortRef.current 
+        && e.target !== pricedecRef.current 
+        && e.target !== priceascRef.current 
+        && e.target !== surfacedecRef.current 
+        && e.target !== surfaceascRef.current) {
+        setDropdownSortOpen(false);
+      }
+    })
+
   return (
     <div className='searchofferts'>
       <div className="searchofferts-firstline">
@@ -41,52 +62,57 @@ import { SearchContext } from '../../Context/SearchContext/SearchContext';
           <p className='searchofferts-resultcount'>{sortedOffers.length} results</p>
         </div>
         <div className="searchofferts-sort-container">
-          <div>
+          <div onClick={() => {setDropdownSortOpen(!dropdownSortOpen)}} ref={searchItemSortRef}>
             <p>Sort</p>
             <img src={arrow} alt="arrow" />
           </div>
-          <ul>
+          {dropdownSortOpen &&
+          <ul ref={dropdownSortRef}>
             <li>
-              <label>
+              <label ref= {pricedecRef}>
                 <input  type="radio"
                         name="sortOption"
                         value="price-desc"
-                        checked={sortingOption === "price-desc"}
-                        onChange={handleSortChange} />
+                        checked={sortingOption === "price-desc"} 
+                        onClick={() => setDropdownSortOpen(false)}
+                        onChange={handleSortChange}/>
                 price descending
               </label>
             </li>
             <li>
-              <label>
+              <label ref= {priceascRef}>
                 <input  type="radio"
                         name="sortOption"
                         value="price-asc"
                         checked={sortingOption === "price-asc"}
-                        onChange={handleSortChange} />
+                        onClick={() => setDropdownSortOpen(false)}
+                        onChange={handleSortChange}/>
                 price ascending
               </label>
             </li>
             <li>
-              <label>
+              <label ref= {surfacedecRef}>
                 <input  type="radio"
                         name="sortOption"
                         value="surface-desc"
                         checked={sortingOption === "surface-desc"}
-                        onChange={handleSortChange} />
+                        onChange={handleSortChange}
+                        onClick={() => setDropdownSortOpen(false)}/>
                 surface descending
               </label>
             </li>
             <li>
-              <label>
+              <label ref= {surfaceascRef}>
                 <input  type="radio"
                         name="sortOption"
                         value="surface-asc"
                         checked={sortingOption === "surface-asc"}
-                        onChange={handleSortChange} />
+                        onChange={handleSortChange}
+                        onClick={() => setDropdownSortOpen(false)}/>
                 surface ascending
               </label>
             </li>
-          </ul>
+          </ul>}
         </div>
       </div>
       <div className="searchpage-offerts">

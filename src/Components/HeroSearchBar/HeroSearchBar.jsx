@@ -19,22 +19,24 @@ const HeroSearchBar = () => {
 
   const [dropdownServiceOpen, setDropdownServiceOpen] = useState(false);
 
-  const dropdownServiceRef = useRef();
+  const dropdownServiceRentRef = useRef();
+  const dropdownServiceSellRef = useRef();
   const searchItemServiceRef = useRef();
 
   window.addEventListener('click', (e) => {
-    if(e.target !== dropdownServiceRef.current && e.target !== searchItemServiceRef.current) {
+    if(e.target !== searchItemServiceRef.current && e.target !== dropdownServiceSellRef.current && e.target !== dropdownServiceRentRef.current) {
       setDropdownServiceOpen(false);
     }
   })
 
   const [dropdownMarketOpen, setDropdownMarketOpen] = useState(false);
 
-  const dropdownMarketRef = useRef();
+  const dropdownMarketPrimaryRef = useRef();
+  const dropdownMarketSecondaryRef = useRef();
   const searchItemMarketRef = useRef();
 
   window.addEventListener('click', (e) => {
-    if(e.target !== dropdownMarketRef.current && e.target !== searchItemMarketRef.current) {
+    if(e.target !== searchItemMarketRef.current && e.target !== dropdownMarketPrimaryRef.current && e.target !== dropdownMarketSecondaryRef.current) {
       setDropdownMarketOpen(false);
     }
   })
@@ -59,9 +61,9 @@ const HeroSearchBar = () => {
           <img src={arrow} alt="arrow" />
         </div>
         {dropdownServiceOpen &&
-        <ul ref= {dropdownServiceRef}>
+        <ul>
           <li>
-            <label>
+            <label ref= {dropdownServiceRentRef}>
             <input    type="radio"
                       name="service"
                       value="rent"
@@ -71,7 +73,7 @@ const HeroSearchBar = () => {
             </label>
           </li>
           <li>
-            <label>
+            <label ref= {dropdownServiceSellRef}>
             <input    type="radio"
                       name="service"
                       value="sell"
@@ -95,9 +97,9 @@ const HeroSearchBar = () => {
           </div>
         </div>
         {dropdownMarketOpen &&
-        <ul ref= {dropdownMarketRef}>
+        <ul>
           <li>
-            <label>
+            <label ref={dropdownMarketPrimaryRef}>
             <input    type="radio"
                       name="market"
                       value="primary"
@@ -107,7 +109,7 @@ const HeroSearchBar = () => {
             </label>
           </li>
           <li>
-            <label>
+            <label ref={dropdownMarketSecondaryRef}>
             <input    type="radio"
                       name="market"
                       value="secondary"
