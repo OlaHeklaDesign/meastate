@@ -45,4 +45,26 @@
   width: 100%;
   max-height: 100px;
   height: 100%;
+  cursor: pointer;
+}
+
+.offert-slider {
+  overflow: hidden;
+  width: 743px;
+  margin: 0 auto;
+}
+
+.offert-slides {
+  display: flex;
+  align-items: start;
+  overflow: hidden;
+  width: 2972px;
+  }
+  
+.offert-slides img {
+    min-width: 743px;
+}
+
+.offert-slider-prevBtn, .offert-slider-nextBtn {
+  cursor: pointer;
 }
