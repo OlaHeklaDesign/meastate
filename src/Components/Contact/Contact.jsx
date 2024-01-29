@@ -1,8 +1,52 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import './Contact.css';
 
 
 const Contact = () => {
+
+  const form = useRef();
+  const [successMessage, setSuccessMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
+  const [formValues, setFormValues] = useState({
+    user_name: '',
+    user_email: '',
+    message: '',
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormValues({ ...formValues, [name]: value });
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+
+    emailjs
+      .sendForm('service_qw2awi7', 'template_g1jtd55', form.current, '5yKegLgQNAhBuNB7d')
+      .then(
+        (result) => {
+          setSuccessMessage('Your message has been sent.');
+          setTimeout(() => {
+            setSuccessMessage('');
+          }, 3000);
+
+          setFormValues({
+            user_name: '',
+            user_email: '',
+            message: '',
+          });
+
+        },
+        (error) => {
+          setErrorMessage('Something went wrong.');
+          setTimeout(() => {
+            setErrorMessage('');
+          }, 3000);
+        }
+      );
+  };
 
   return (
     <div class="contact-bg-container" id='contact'>
@@ -12,15 +56,27 @@ const Contact = () => {
         <p>Write us what you are looking for<br/>and we'll find what you need.</p>
       </div>
       <div class="contact-right">
-        <div class="contact-name-email-box">
-          <input type="text" placeholder="names" />
-          <input type="email" placeholder="email address" />
-        </div>
-        <div class="contact-message" contenteditable="true">
-          <p>apartment description</p>
-          <p>Name of district, number of sqft, what rooms, any additional preferences will be appreciated</p>
-        </div>
-        <button>send message</button>
+        <form ref={form} onSubmit={sendEmail}>
+          <div class="contact-name-email-box">
+            <input  type="text" 
+                    placeholder="names" 
+                    name="user_name"
+                    value={formValues.user_name}
+                    onChange={handleInputChange} />
+            <input  type="email" 
+                    placeholder="email address" 
+                    name="user_email"
+                    value={formValues.user_email}
+                    onChange={handleInputChange} />
+          </div>
+          <textarea placeholder='Name of district, number of sqft, what rooms, any additional preferences will be appreciated'
+                    name="message"
+                    value={formValues.message}
+                    onChange={handleInputChange}></textarea>
+          <button type="submit" value="Send">send message</button>
+          <p className='contact-form-message'>{successMessage}</p>
+          <p className='contact-form-message'>{errorMessage}</p>
+        </form>
       </div>
     </section>
   </div>

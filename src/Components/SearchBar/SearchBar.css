@@ -16,6 +16,7 @@
   display: flex;
   align-items: center;
   gap: 22px;
+  cursor: pointer;
 }
 
 .searchbar-offer-container,
@@ -78,6 +79,7 @@
   background: #093642;
   border: none;
   outline: none;
+  cursor: pointer;
 }
 
 
@@ -97,6 +99,10 @@
 
 .searchbar ul li {
   list-style: none;
+}
+
+.searchbar ul li label {
+  cursor: pointer;
 }
 
 .searchbar ul li input {

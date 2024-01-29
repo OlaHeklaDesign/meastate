@@ -32,6 +32,7 @@ header button {
   padding: 10px 62px;
   border: 1px solid #093642;
   background: transparent;
+  cursor: pointer;
 }
 
 .header-bg {
