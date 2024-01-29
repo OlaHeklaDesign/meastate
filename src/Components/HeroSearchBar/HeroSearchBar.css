@@ -124,3 +124,14 @@
 .selected {
   font-weight: bold !important;
 }
+
+
+.searchbar-validation {
+  font-size: 10px;
+}
+
+.herosearchbar-search-validation {
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 10px;
+}

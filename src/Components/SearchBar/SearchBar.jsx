@@ -6,7 +6,7 @@ import { SearchContext } from '../../Context/SearchContext/SearchContext';
 
 const SearchBar = () => {
 
-  const {onFilterChange, onSearch, filters} = useContext(SearchContext);
+  const {onFilterChange, onSearch, filters, errorSurface, errorPrice, minpriceInputRef, maxpriceInputRef, minsurfaceInputRef, maxsurfaceInputRef} = useContext(SearchContext);
 
   const [dropdownServiceOpen, setDropdownServiceOpen] = useState(false);
 
@@ -35,8 +35,6 @@ const SearchBar = () => {
   const [dropdownPriceOpen, setDropdownPriceOpen] = useState(false);
 
   const searchItemPriceRef = useRef();
-  const minpriceInputRef = useRef();
-  const maxpriceInputRef = useRef();
 
   window.addEventListener('click', (e) => {
     if(e.target !== searchItemPriceRef.current && e.target !== minpriceInputRef.current && e.target !== maxpriceInputRef.current ) {
@@ -47,8 +45,6 @@ const SearchBar = () => {
   const [dropdownSurfaceOpen, setDropdownSurfaceOpen] = useState(false);
 
   const searchItemSurfaceRef = useRef();
-  const minsurfaceInputRef = useRef();
-  const maxsurfaceInputRef = useRef();
 
   window.addEventListener('click', (e) => {
     if(e.target !== searchItemSurfaceRef.current && e.target !== minsurfaceInputRef.current && e.target !== maxsurfaceInputRef.current ) {
@@ -58,7 +54,8 @@ const SearchBar = () => {
 
 
   return (
-    <div className='searchbar'>
+    <div className="searchbar-container">
+      <div className='searchbar'>
       <div className="searchbar-offer-container">
         <div onClick={() => {setDropdownServiceOpen(!dropdownServiceOpen)}} ref= {searchItemServiceRef}>
           <p>{filters.service}</p>
@@ -126,6 +123,7 @@ const SearchBar = () => {
                       onChange={(e) => onFilterChange({ target: { name: 'maxSurface', value: e.target.value } })}/> 
             </label>
           </li>
+          <p className='searchbar-validation'>{errorSurface}</p>
         </ul>}
       </div>
       <div className="searchbar-market-container">
@@ -179,25 +177,28 @@ const SearchBar = () => {
         <ul>
           <li>
             <label>
-              <input  type="text"
+              <input  type="number"
                       name="minPrice"
-                      placeholder='from'
+                      placeholder={`from ${filters.minPrice}$`}
                       ref= {minpriceInputRef}
                       onChange={(e) => onFilterChange({ target: { name: 'minPrice', value: e.target.value } })}/> 
             </label>
           </li>
           <li>
             <label>
-              <input  type="text"
+              <input  type="number"
                       name="maxPrice"
-                      placeholder='to'
+                      placeholder={`to ${filters.maxPrice}$`}
                       ref= {maxpriceInputRef}
                       onChange={(e) => onFilterChange({ target: { name: 'maxPrice', value: e.target.value } })}/> 
             </label>
           </li>
+          <p className='searchbar-validation'>{errorPrice}</p>
         </ul>}
       </div>
       <button onClick={onSearch}>search</button>
+      </div>
+      <p className='herosearchbar-search-validation right'></p>
     </div>
   )
 }

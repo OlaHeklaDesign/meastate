@@ -1,4 +1,4 @@
-import React, { useState, createContext, useEffect } from 'react';
+import React, { useState, createContext, useRef } from 'react';
 import all_offers from '../../Components/Assets/all_offers';
 
 
@@ -17,14 +17,49 @@ const SearchContextProvider = (props) => {
     maxPrice: '',
   });
 
+  const [errorPrice, setErrorPrice] = useState(null);
+  const [errorSurface, setSurfaceError] = useState(null);
+
+  const minpriceInputRef = useRef();
+  const maxpriceInputRef = useRef();
+  const minsurfaceInputRef = useRef();
+  const maxsurfaceInputRef = useRef();
+
   const onFilterChange = (e) => {
     const { name, value } = e.target;
     setFilters((prevFilters) => ({ ...prevFilters, [name]: value }));
-  };
+
+
+    if (name === 'minPrice' || name === 'maxPrice') {
+      if (parseFloat(minpriceInputRef.current.value) >= parseFloat(maxpriceInputRef.current.value)) {
+        setErrorPrice('Minimum price must be less than maximum price.');
+      } else {
+        setErrorPrice(null); 
+      }
+  }
+    if (name === 'minSurface' || name === 'maxSurface') {
+      if (parseFloat(minsurfaceInputRef.current.value) >= parseFloat(maxsurfaceInputRef.current.value)) {
+        setSurfaceError('Minimum surface must be less than maximum surface.');
+      } else {
+        setSurfaceError(null); 
+      }
+  }
+};
 
   const onSearch = () => {
     console.log('Filters:', filters);
-  
+
+    if (errorPrice) {
+      document.querySelector('.herosearchbar-search-validation').innerHTML = `${errorPrice}`;
+      return false;
+    } else if (errorSurface) {
+      document.querySelector('.herosearchbar-search-validation').innerHTML = `${errorSurface}`;
+      return false;
+    }
+    else {
+      document.querySelector('.herosearchbar-search-validation').innerHTML = '';
+      document.querySelector('.herosearchbar-search-validation').innerHTML = '';
+
     const filteredResults = all_offers.filter((offer) => {
       console.log('Checking offer:', offer);
   
@@ -65,12 +100,10 @@ const SearchContextProvider = (props) => {
     console.log('Filtered results:', filteredResults);
   
     setFilteredOffers(filteredResults);
-  };
+  }}
   
   
-  const contextValue = {setFilteredOffers, setFilters, onSearch, onFilterChange, filteredOffers, filters};
-
-  
+  const contextValue = {setFilteredOffers, setFilters, onSearch, onFilterChange, filteredOffers, filters, errorSurface, errorPrice, setErrorPrice, minpriceInputRef, maxpriceInputRef, minsurfaceInputRef, maxsurfaceInputRef };
 
   return (
     <SearchContext.Provider value={contextValue}>

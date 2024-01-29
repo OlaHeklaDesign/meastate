@@ -128,3 +128,12 @@
   letter-spacing: 0.32px;
   text-transform: uppercase;
 }
+
+.searchbar-container {
+  width: 1292px;
+  margin: 0 auto;
+}
+
+.right {
+  text-align: right;
+}
