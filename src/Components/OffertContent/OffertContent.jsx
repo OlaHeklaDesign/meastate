@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 import './OffertContent.css';
 import bedroom_icon from '../Assets/bedroom.svg';
 import bathroom_icon from '../Assets/bathroom.svg';
@@ -17,6 +18,47 @@ const OffertContent = (props) => {
   }
 
   const agentInfo = getAgentInfo(property.agentId);
+
+  const form = useRef();
+  const [successMessage, setSuccessMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
+  const [formValues, setFormValues] = useState({
+    user_name: '',
+    user_phone: '',
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormValues({ ...formValues, [name]: value });
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+
+    emailjs
+      .sendForm('service_qw2awi7', 'template_dik51uo', form.current, '5yKegLgQNAhBuNB7d')
+      .then(
+        (result) => {
+          setSuccessMessage('Your message has been sent.');
+          setTimeout(() => {
+            setSuccessMessage('');
+          }, 3000);
+
+          setFormValues({
+            user_name: '',
+            user_phone: '',
+          });
+
+        },
+        (error) => {
+          setErrorMessage('Something went wrong.');
+          setTimeout(() => {
+            setErrorMessage('');
+          }, 3000);
+        }
+      );
+  };
 
   return (
     <div className='offertcontent'>
@@ -60,11 +102,23 @@ const OffertContent = (props) => {
       </div>
       <div className="offertcontent-contact">
         <h4>Wants to see this apartment!</h4>
-        <div>
-          <input type="text" placeholder='First and last name' />
-          <input type="text" placeholder='Phone number' />
-        </div>
-        <button>Make an appointment</button>
+        <form ref={form} onSubmit={sendEmail}>
+          <div>
+            <input  type="text" 
+                    placeholder='First and last name' 
+                    name="user_name"
+                    value={formValues.user_name}
+                    onChange={handleInputChange}/>
+            <input  type="number" 
+                    placeholder='Phone number' 
+                    name="user_phone"
+                    value={formValues.user_phone}
+                    onChange={handleInputChange} />
+          </div>
+          <button type="submit" value="Send">Make an appointment</button>
+          <p className='offert-form-message'>{successMessage}</p>
+          <p className='offert-form-message'>{errorMessage}</p>
+        </form>
       </div>
     </div>
   )

@@ -109,7 +109,7 @@ const SearchBar = () => {
             <label>
               <input  type="text"
                       name="minSurface"
-                      placeholder='from'
+                      placeholder={`from ${filters.minSurface}m2`}
                       ref= {minsurfaceInputRef}
                       onChange={(e) => onFilterChange({ target: { name: 'minSurface', value: e.target.value } })}/> 
             </label>
@@ -118,9 +118,10 @@ const SearchBar = () => {
             <label>
               <input  type="text"
                       name="maxSurface"
-                      placeholder='to'
+                      placeholder={`to ${filters.maxSurface}m2`}
                       ref= {maxsurfaceInputRef}
-                      onChange={(e) => onFilterChange({ target: { name: 'maxSurface', value: e.target.value } })}/> 
+                      onChange={(e) => onFilterChange({ target: { name: 'maxSurface', value: e.target.value } })}
+                      /> 
             </label>
           </li>
           <p className='searchbar-validation'>{errorSurface}</p>

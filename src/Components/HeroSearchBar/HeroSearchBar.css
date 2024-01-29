@@ -121,6 +121,10 @@
   border: 1px solid #093642;
 }
 
+.herosearchbar-price-container {
+  width: 110px;
+}
+
 .selected {
   font-weight: bold !important;
 }

@@ -137,3 +137,11 @@
 .right {
   text-align: right;
 }
+
+.searchbar-price-container {
+  width: 170px;
+}
+
+.searchbar-surface-container {
+  width: 150px;
+}
