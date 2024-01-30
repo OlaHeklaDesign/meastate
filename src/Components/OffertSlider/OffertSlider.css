@@ -60,11 +60,154 @@
   overflow: hidden;
   width: 2972px;
   }
-  
-.offert-slides img {
-    min-width: 743px;
-}
+
 
 .offert-slider-prevBtn, .offert-slider-nextBtn {
   cursor: pointer;
+}
+
+
+@media only screen and (max-width: 1332px)  {
+  .offertslider {
+    margin-left: 20px;
+  }
+  .offert-slider {
+    width: 700px;
+  }
+  .offert-slides img {
+    width: 700px;
+  }
+  .offertcontent {
+    padding-left: 24px !important;
+  }
+}
+
+@media only screen and (max-width: 1238px)  {
+  .offert-slider {
+    width: 600px;
+  }
+  .offert-slides img {
+    width: 600px;
+  }
+  .offertslider-images {
+    justify-content: space-between;
+  }
+  .offertslider-images img {
+    max-width: 140px;
+    height: 90px;
+  }
+  .offertcontent-rooms {
+    margin-bottom: 20px !important;
+  }
+}
+
+@media only screen and (max-width: 1185px)  {
+  .offertcontent-contact div {
+    flex-direction: column;
+    align-items: start !important;
+    gap: 0 !important;
+  }
+}
+
+@media only screen and (max-width: 990px)  {
+  .offert-slider {
+    width: 743px;
+  }
+  .offert-slides img {
+    width: 743px;
+  }
+  .offertslider-images img {
+    max-width: none;
+    height: 120px;
+  }
+}
+
+@media only screen and (max-width: 784px)  {
+  .offert-slider {
+    width: 600px;
+  }
+
+  .offertslider-images img {
+    max-width: 140px;
+    height: 90px;
+  }
+}
+
+@media only screen and (max-width: 784px)  {
+  .offert-slider {
+    width: 500px;
+    height: 300px;
+  }
+  .offert-slides img {
+    width: 500px !important;
+  }
+  .offertslider-images img {
+    max-width: 120px;
+    height: 70px;
+  }
+  .offertslider {
+    max-width: 500px;
+  }
+  .offertslider-images {
+    gap: 2px;
+  }
+  .offert-slides img {
+    width: 500px;
+  }
+}
+
+@media only screen and (max-width: 536px)  {
+  .offert-slider {
+    width: 400px;
+    height: 260px;
+  }
+  .offertslider-images img {
+    max-width: 96px;
+    height: 60px;
+  }
+  .offert-slides img {
+    width: 400px !important;
+  }
+  .offertslider {
+    max-width: 400px;
+  }
+  .offertslider-images {
+    gap: 2px;
+    margin-top: 5px;
+  }
+  .offertcontent-location-surface-container {
+    justify-content: start !important;
+    gap: 100px !important;
+  }
+}
+
+@media only screen and (max-width: 436px)  {
+  .offert-slider {
+    width: 280px;
+    height: 180px;
+  }
+  .offert-slides img {
+    width: 280px !important;
+  }
+  .offertslider-images img {
+    max-width: 65px;
+    height: 40px;
+  }
+  .offertslider {
+    max-width: 280px;
+  }
+  .offertcontent-location-surface-container {
+    flex-direction: column;
+    align-items: start !important;
+    gap: 2px !important;
+  }
+  .offertcontent-location-surface-container p {
+    line-height: 33px !important;
+  }
+  .offertcontent-rooms {
+    margin-top: 30px;
+  }
+  .offertcontent-agent {
+    margin-right: 20px;
+  }
 }

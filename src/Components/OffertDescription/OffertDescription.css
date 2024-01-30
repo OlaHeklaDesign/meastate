@@ -3,6 +3,7 @@
   align-items: start;
   justify-content: space-between;
   padding-top: 73px;
+  overflow: hidden;
 }
 
 .offertdescription p {

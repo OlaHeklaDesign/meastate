@@ -21,3 +21,13 @@
   align-items: start;
   justify-content: space-between;
 }
+
+@media only screen and (max-width: 990px)  {
+  .offertpage-slider-content-container {
+    flex-direction: column;
+  }
+  .offertcontent {
+    max-width: 600px;
+    width: 100%;
+  }
+}

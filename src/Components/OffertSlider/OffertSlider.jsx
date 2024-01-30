@@ -34,7 +34,33 @@ const OffertSlider = (props) => {
   }
   
 
-  const slideWidth = 743;
+let slideWidth = 743;
+
+function setSlideWidth() {
+  const screenWidth = window.innerWidth;
+
+  if (screenWidth <= 1332 && screenWidth >=1238) {
+    slideWidth = 700;
+  } else if (screenWidth <= 1238 && screenWidth >990) {
+    slideWidth = 600;
+  } else if (screenWidth <= 990 && screenWidth >784) {
+    slideWidth = 743;
+  } else if (screenWidth <= 784 && screenWidth >646) {
+    slideWidth = 500;
+  } else if (screenWidth <= 646 && screenWidth >536) {
+    slideWidth = 500;
+  } else if (screenWidth <= 536 && screenWidth >436) {
+    slideWidth = 400;
+  } else if (screenWidth <= 436) {
+    slideWidth = 280;
+  }
+}
+
+setSlideWidth();
+console.log(slideWidth);
+
+window.addEventListener('resize', setSlideWidth);
+
   const slidesCount = 4;
 
   const sliderStyle = {
@@ -46,10 +72,11 @@ const OffertSlider = (props) => {
     setCurrentState(index);
   }
 
+
   return (
     <div className='offertslider'>
       <div className="offertslider-mainimg offert-slider">
-        <div className="offert-slides" style={sliderStyle}>
+        <div className="offert-slides" id='offert-slides' style={sliderStyle}>
         {property.additionalImages.map((image, index) => (
           <img key={index} src={image} />
         ))}
