@@ -53,7 +53,7 @@ const Contact = () => {
     <section class="contact">
       <div class="contact-left">
         <h2>Haven't you found your dream home?</h2>
-        <p>Write us what you are looking for<br/>and we'll find what you need.</p>
+        <p>Write us what you are looking for and we'll find what you need.</p>
       </div>
       <div class="contact-right">
         <form ref={form} onSubmit={sendEmail}>
