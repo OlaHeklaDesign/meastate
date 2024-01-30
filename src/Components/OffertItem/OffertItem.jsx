@@ -12,7 +12,7 @@ const OffertItem = ({main_image, offer, location, surface, bedrooms, bathrooms, 
     <Link to={`/offert/${id}`} style={{textDecoration: "none"}}>
       <div className='offertitem'>
         <div className="offertitem-image-container">
-          <img src={main_image} alt="" />
+          <img src={main_image} alt="" className='offertitem-mainimg' />
           <p className='offertitem-offer'>{offer}</p>
         </div>
         <div className="offertitem-content">

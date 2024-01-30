@@ -40,3 +40,66 @@ header button {
   background-position: center;
   background-repeat: repeat-y;
 }
+
+.mobile-nav {
+  position: relative;
+  display: none;
+}
+
+.mobile-nav div {
+  position: absolute;
+  top: 120%;
+  right: 0;
+  display: flex;
+  background: #093642;
+  padding: 10px 20px;
+  display: none;
+}
+
+.mobile-nav a {
+  color: #F6F6F7;
+}
+
+
+@media only screen and (max-width: 1332px)  {
+  header {
+    margin: 0 20px;
+  }
+}
+
+@media only screen and (max-width: 970px)  {
+  header ul {
+    gap: 40px;
+  }
+}
+
+@media only screen and (max-width: 845px)  {
+  header button {
+    padding: 10px 30px;
+  }
+}
+
+@media only screen and (max-width: 763px)  {
+  header ul {
+    gap: 20px;
+  }
+  header button {
+    margin-left: 20px;
+  }
+}
+
+@media only screen and (max-width: 660px)  {
+  .desktop-nav {
+    display: none;
+  }
+  header {
+    padding-bottom: 16px;
+  }
+}
+
+@media only screen and (max-width: 482px)  {
+  .mobile-nav ul {
+    flex-direction: column;
+  }
+  
+}

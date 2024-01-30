@@ -3,4 +3,11 @@
   background-image: url('../../Components/Assets/bg-strips.png');
   background-position: center;
   background-repeat: repeat-y;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 1332px)  {
+  .searchpage {
+    padding: 64px 20px 0 20px;
+  }
 }
