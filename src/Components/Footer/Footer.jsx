@@ -70,7 +70,7 @@ const Footer = () => {
       <a href="">privacy police</a>
       <a href="">terms and conditions</a>
     </div>
-    <img src={white_logo} alt="logo"/>
+    <img className='footer-logo' src={white_logo} alt="logo"/>
   </footer>
   )
 }

@@ -75,3 +75,50 @@ footer h3 {
   flex-direction: column;
   gap: 18px;
 }
+
+@media only screen and (max-width: 1332px)  {
+  footer {
+    padding: 70px 20px;
+  }
+}
+
+@media only screen and (max-width: 1035px)  {
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.7fr 1fr 0.5fr;
+  }
+  .footer-logo-copy-container p {
+    max-width: 150px;
+  }
+}
+
+@media only screen and (max-width: 827px)  {
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.5fr;
+    row-gap: 30px;
+    position: relative;
+  }
+  .footer-logo {
+    transform: rotate(90deg);
+    position: absolute;
+    left: 400px;
+    bottom: -40px;
+  }
+}
+
+@media only screen and (max-width: 633px)  {
+  footer {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 50px;
+  }
+  .footer-logo {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 435px)  {
+  footer {
+    grid-template-columns: 1fr;
+  }
+}
