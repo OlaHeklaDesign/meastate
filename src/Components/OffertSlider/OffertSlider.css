@@ -66,6 +66,10 @@
   cursor: pointer;
 }
 
+.offert-slides img {
+  width: 743px;
+}
+
 
 @media only screen and (max-width: 1332px)  {
   .offertslider {

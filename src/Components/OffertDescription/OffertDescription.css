@@ -23,3 +23,36 @@
   margin-left: 43px;
   padding-bottom: 15px;
 }
+
+@media only screen and (max-width: 1332px)  {
+  .offertdescription {
+    padding: 73px 20px 0 20px;
+  }
+  .offertdescription p {
+    margin-right: 100px;
+  }
+}
+
+@media only screen and (max-width: 1022px)  {
+  .offertdescription p {
+    margin-right: 30px;
+  }
+  .offertdescription-floorplan img {
+    width: 250px;
+  }
+}
+
+@media only screen and (max-width: 630px)  {
+  .offertdescription {
+    flex-direction: column;
+  }
+  .offertdescription-floorplan {
+    margin-top: 40px;
+  }
+  .offertdescription h4 {
+    margin-left: 0;
+  }
+  .offertdescription p {
+    margin-right: 0;
+  }
+}

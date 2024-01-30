@@ -1,7 +1,6 @@
 .herosearchbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   background: #FFF;
   filter: drop-shadow(0px 14px 14px rgba(0, 0, 0, 0.04));
   padding: 26px;
@@ -26,6 +25,10 @@
   letter-spacing: 0.32px;
   text-transform: uppercase;
   margin-bottom: 4px;
+}
+.herosearchbar-offer-container {
+  display: flex;
+  align-items: center;
 }
 
 .herosearchbar-offer-container p {
@@ -141,4 +144,30 @@
   font-size: 12px;
   font-weight: 500;
   margin-top: 10px;
+}
+
+@media only screen and (max-width: 1260px)  {
+  .herosearchbar {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 30px;
+  }
+  .herosearchbar button {
+    grid-column: span 2;
+  }
+  .herosearchbar {
+    max-width: 400px;
+    margin-top: 30px;
+    margin-bottom: 60px;
+  }
+}
+
+@media only screen and (max-width: 436px)  {
+  .herosearchbar {
+    grid-template-columns: 1fr !important;
+    row-gap: 30px;
+    margin-right: 20px;
+  }
+  .herosearchbar button {
+    grid-column: span 1;
+  }
 }

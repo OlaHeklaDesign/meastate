@@ -5,6 +5,7 @@
   background-image: url('../Assets/bg-strips.png');
   background-position: center;
   background-repeat: repeat-y;
+  overflow: hidden;
 }
 
 .latestproperty-title-buttons-container {
@@ -55,4 +56,8 @@
 
 .latestproperty-prevBtn, .latestproperty-nextBtn {
   cursor: pointer;
+}
+
+@media only screen and (max-width: 1332px)  {
+
 }
