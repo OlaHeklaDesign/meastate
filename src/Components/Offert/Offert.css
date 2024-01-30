@@ -2,7 +2,6 @@
   padding: 70px 0 110px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   border-top: 1px solid rgba(0, 0, 0, 0.05);
-  overflow: hidden;
 }
 
 .offert h2 {
@@ -20,6 +19,7 @@
   justify-content: space-between;
   max-width: 1120px;
   margin: 0 auto;
+  gap: 40px;
 }
 
 .offert-box {
@@ -39,7 +39,6 @@
   font-family: "Space Grotesk";
   font-size: 20px;
   font-weight: 400;
-  line-height: 30px;
   letter-spacing: 0.8px;
   margin-bottom: 21px;
 }
@@ -51,4 +50,26 @@
   text-transform: uppercase;
   letter-spacing: 0.28px;
   max-width: 300px;
+}
+
+@media only screen and (max-width: 1332px)  {
+  .offert {
+    margin: 0 20px;
+  }
+}
+
+@media only screen and (max-width: 789px)  {
+  .offert-box h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .offert-box p {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 574px)  {
+  .offert-container {
+    flex-direction: column;
+  }
 }
