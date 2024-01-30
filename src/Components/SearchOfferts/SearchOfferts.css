@@ -93,3 +93,9 @@
 .searchofferts-sort-container label {
   cursor: pointer;
 }
+
+@media only screen and (max-width: 1332px)  {
+  .searchofferts {
+    margin: 0 20px;
+  }
+}

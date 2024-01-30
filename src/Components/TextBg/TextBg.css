@@ -7,12 +7,53 @@
 .textbg p {
   color: #E4E8E9;
   font-family: "Space Grotesk";
-  font-size: 124px;
+  font-size: 9vw;
   font-style: normal;
   font-weight: 700;
-  line-height: 144px;
   letter-spacing: 4.96px;
   bottom: 8px;
   width: 100%;
   text-align: center;
+}
+
+@media only screen and (max-width: 1332px)  {
+  .textbg p {
+    font-size: 8.5vw;
+  }
+}
+
+@media only screen and (max-width: 944px)  {
+  .textbg p {
+    font-size: 8vw;
+  }
+}
+
+@media only screen and (max-width: 704px)  {
+  .textbg p {
+    font-size: 7.5vw;
+  }
+}
+
+@media only screen and (max-width: 562px)  {
+  .textbg p {
+    font-size: 7vw;
+  }
+}
+
+@media only screen and (max-width: 467px)  {
+  .textbg p {
+    font-size: 6.5vw;
+  }
+}
+
+@media only screen and (max-width: 401px)  {
+  .textbg p {
+    font-size: 6vw;
+  }
+}
+
+@media only screen and (max-width: 349px)  {
+  .textbg p {
+    font-size: 5.5vw;
+  }
 }
