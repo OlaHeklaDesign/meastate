@@ -75,18 +75,3 @@
 .offertitem-mainimg {
   width: 100%;
 }
-
-@media only screen and (max-width: 1332px)  {
-  .offertitem {
-    max-width: none;
-  }
-  .searchpage-offerts {
-    grid-template-columns: repeat(3, 1fr) !important;
-  }
-}
-
-@media only screen and (max-width: 1002px)  {
-  .searchpage-offerts {
-    grid-template-columns: repeat(2, 1fr) !important;
-  }
-}

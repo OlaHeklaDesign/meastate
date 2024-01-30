@@ -98,4 +98,39 @@
   .searchofferts {
     margin: 0 20px;
   }
+  .offertitem {
+    max-width: none;
+  }
+  .searchpage-offerts {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+@media only screen and (max-width: 1002px)  {
+  .searchpage-offerts {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media only screen and (max-width: 663px)  {
+  .searchpage-offerts {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media only screen and (max-width: 534px)  {
+  .searchofferts-firstline {
+    flex-direction: column;
+    align-items: start;
+    margin-bottom: 20px;
+  }
+  .searchofferts-resultcount {
+    margin-bottom: 14px;
+  }
+}
+
+@media only screen and (max-width: 345px)  {
+  .offertitem {
+    min-width: none;
+  }
 }
