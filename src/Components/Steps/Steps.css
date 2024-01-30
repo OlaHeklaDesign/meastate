@@ -14,7 +14,8 @@
 
 .steps-main {
   display: flex;
-  gap: 170px;
+  justify-content: space-between;
+  gap: 30px;
 }
 
 .steps-left h2 {
@@ -69,4 +70,42 @@
   display: flex;
   flex-direction: column;
   gap: 87px;
+  max-width: 600px;
+  width: 100%;
+}
+
+@media only screen and (max-width: 1332px)  {
+  .steps {
+    margin: 0 20px;
+  }
+}
+
+@media only screen and (max-width: 1240px)  {
+  .step-number {
+    margin-right: 14px;
+  }
+  .step-name {
+    margin-bottom: 10px;
+  }
+  .steps-right {
+    gap: 60px;
+    justify-content: end;
+  }
+}
+
+@media only screen and (max-width: 1012px)  {
+  .steps-left img {
+    width: 400px;
+  }
+}
+
+@media only screen and (max-width: 890px)  {
+  .steps-main {
+    flex-direction: column;
+    gap: 60px;
+  }
+  .steps-left img {
+    max-width: 530px;
+    width: 100%;
+  }
 }
