@@ -1,5 +1,5 @@
 .searchbar {
-  width: 1292px;
+  max-width: 1292px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -95,6 +95,7 @@
   background: #F6F6F7;
   border: 1px solid #093642;
   padding: 6px 16px;
+  z-index: 5;
 }
 
 .searchbar ul li {
@@ -136,7 +137,7 @@
 }
 
 .searchbar-container {
-  width: 1292px;
+  max-width: 1292px;
   margin: 0 auto;
 }
 
@@ -150,4 +151,36 @@
 
 .searchbar-surface-container {
   width: 150px;
+}
+
+@media only screen and (max-width: 1240px)  {
+  .searchbar {
+    padding: 30px 14px;
+  }
+}
+
+@media only screen and (max-width: 998px)  {
+  .searchbar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 30px;
+  }
+}
+
+@media only screen and (max-width: 642px)  {
+  .searchbar {
+    grid-template-columns: 0.7fr 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 596px)  {
+  .searchbar {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 450px)  {
+  .searchbar {
+    grid-template-columns: 1fr;
+  }
 }
