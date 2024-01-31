@@ -49,16 +49,16 @@ const Footer = () => {
       <h3>Links</h3>
       <ul>
         <li>
-          <a href="/#steps">steps</a>
+          <a href="/meastate/#steps">steps</a>
         </li>
         <li>
-          <a href="/#testimonials">testimonials</a>
+          <a href="/meastate/#testimonials">testimonials</a>
         </li>
         <li>
-          <a href="/#offert">agency</a>
+          <a href="/meastate/#offert">agency</a>
         </li>
         <li>
-          <a href="#contact">contact</a>
+          <a href="/meastate/#contact">contact</a>
         </li>
       </ul>
     </div>

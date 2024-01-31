@@ -25,16 +25,16 @@ const Header = () => {
         <div className="header-right desktop-nav">
           <ul>
             <li>
-              <a href="/#steps">STEPS</a>
+              <a href="/meastate/#steps">STEPS</a>
             </li>
             <li>
-              <a href="/#testimonials">TESTIMONIALS</a>
+              <a href="/meastate/#testimonials">TESTIMONIALS</a>
             </li>
             <li>
-              <a href="/#offert">AGENCY</a>
+              <a href="/meastate/#offert">AGENCY</a>
             </li>
             <li>
-              <a href="#contact">CONTACT</a>
+              <a href="/meastate/#contact">CONTACT</a>
             </li>
           </ul>
           <button onClick={handleButtonClick}>contact with us</button>
@@ -45,16 +45,16 @@ const Header = () => {
           <div>
             <ul>
               <li>
-                <a href="/#steps">STEPS</a>
+                <a href="/meastate/#steps">STEPS</a>
               </li>
               <li>
-                <a href="/#testimonials">TESTIMONIALS</a>
+                <a href="/meastate/#testimonials">TESTIMONIALS</a>
               </li>
               <li>
-                <a href="/#offert">AGENCY</a>
+                <a href="/meastate/#offert">AGENCY</a>
               </li>
               <li>
-                <a href="#contact">CONTACT</a>
+                <a href="/meastate/#contact">CONTACT</a>
               </li>
             </ul>
           </div>}
