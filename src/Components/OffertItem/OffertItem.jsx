@@ -14,7 +14,7 @@ const OffertItem = ({main_image, offer, location, surface, bedrooms, bathrooms, 
   };
 
   return (
-    <Link to={`/offert/${id}`} style={{textDecoration: "none"}}>
+    <Link to={`/mestate/offert/${id}`} style={{textDecoration: "none"}}>
       <div onClick={handleClick} className='offertitem'>
         <div className="offertitem-image-container">
           <img src={main_image} alt="" className='offertitem-mainimg' />
