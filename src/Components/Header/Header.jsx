@@ -21,7 +21,7 @@ const Header = () => {
   return (
     <div className="header-bg">
       <header>
-        <Link style={{textDecoration: "none"}} to='/'><img src={logo} alt="logo"/></Link>
+        <Link style={{textDecoration: "none"}} to='/meastate/'><img src={logo} alt="logo"/></Link>
         <div className="header-right desktop-nav">
           <ul>
             <li>
