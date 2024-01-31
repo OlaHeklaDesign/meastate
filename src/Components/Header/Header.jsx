@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
 import logo from '../Assets/logo.svg';
@@ -6,6 +6,13 @@ import mobile_menu from '../Assets/mobile-menu.svg';
 
 
 const Header = () => {
+
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
     <div className="header-bg">
       <header>
@@ -31,7 +38,8 @@ const Header = () => {
           <button>contact with us</button>
         </div>
         <div class="mobile-nav">
-          <img src={mobile_menu} alt="menu" />
+          <img src={mobile_menu} alt="menu" onClick={toggleMobileMenu} />
+          {isMobileMenuOpen &&
           <div>
             <ul>
               <li>
@@ -50,7 +58,7 @@ const Header = () => {
                 <a href="#contact">CONTACT</a>
               </li>
             </ul>
-          </div>
+          </div>}
         </div>
       </header>
     </div>

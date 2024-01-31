@@ -6,7 +6,6 @@
   max-width: 1292px;
   margin: 0 auto;
   padding: 61px 0 122px 0;
-  overflow: hidden;
 }
 
 .testimonialhero-title-buttons {
@@ -38,7 +37,8 @@
 
 .testimonials-slider {
   overflow: hidden;
-  width: 1235px;
+  width: 1215px;
+  margin: 0 auto;
 }
 
 .testimonials-slides {
@@ -46,13 +46,107 @@
   gap: 105px;
   align-items: start;
   overflow: hidden;
-  width: 3915px;
+  width: 3855px;
   }
   
 .testimonial {
-    min-width: 535px;
+    width: 555px;
 }
 
 .testimonial-prevBtn, .testimonial-nextBtn {
   cursor: pointer;
+}
+
+@media only screen and (max-width: 1332px)  {
+  .testimonialhero {
+    padding: 61px 20px 122px 20px;
+  }
+}
+
+@media only screen and (max-width: 1275px)  {
+  .testimonials-slides {
+    gap: 50px;
+    width: 3250px;
+    }
+  .testimonials-slider {
+    width: 1050px;
+  }
+  .testimonial {
+    width: 500px;
+}
+}
+
+@media only screen and (max-width: 1090px)  {
+  .testimonials-slides {
+    gap: 50px;
+    width: 2650px;
+    }
+  .testimonials-slider {
+    width: 850px;
+  }
+  .testimonial {
+    width: 400px;
+}
+}
+
+@media only screen and (max-width: 1090px)  {
+  .testimonials-slides {
+    gap: 0px;
+    width: 3600px;
+    }
+  .testimonials-slider {
+    width: 600px;
+  }
+  .testimonial {
+    width: 600px;
+}
+}
+
+@media only screen and (max-width: 760px)  {
+  .testimonialhero-title-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .testimonialhero-title-buttons h2 {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 600px)  {
+  .testimonialhero-title-buttons h2 {
+    font-size: 36px;
+    line-height: 50px;
+  }
+}
+
+@media only screen and (max-width: 640px)  {
+  .testimonials-slides {
+    width: 2400px;
+    }
+  .testimonials-slider {
+    width: 400px;
+  }
+  .testimonial {
+    width: 400px;
+}
+}
+
+@media only screen and (max-width: 440px)  {
+  .testimonials-slides {
+    width: 1680px;
+    }
+  .testimonials-slider {
+    width: 280px;
+  }
+  .testimonial {
+    width: 280px;
+}
+}
+
+@media only screen and (max-width: 400px)  {
+  .testimonialhero-title-buttons h2 {
+    font-size: 30px;
+    line-height: 40px;
+  }
 }

@@ -5,7 +5,6 @@
   background-image: url('../Assets/bg-strips.png');
   background-position: center;
   background-repeat: repeat-y;
-  overflow: hidden;
 }
 
 .latestproperty-title-buttons-container {
@@ -59,5 +58,42 @@
 }
 
 @media only screen and (max-width: 1332px)  {
+  .latestproperty {
+    margin: 0 20px;
+  }
+  .latestproperty-slider {
+    width: 964px;
+  }
+}
 
+@media only screen and (max-width: 1004px)  {
+  .latestproperty-slider {
+    width: 634px;
+  }
+}
+
+@media only screen and (max-width: 684px)  {
+  .latestproperty-slider {
+    width: 305px;
+  }
+  .latestproperty-title-buttons-container {
+    flex-direction: column;
+  }
+  .latestproperty-title-buttons-container h2 {
+    margin-bottom: 40px;
+  }
+}
+
+@media only screen and (max-width: 600px)  {
+  .latestproperty-title-buttons-container h2 {
+    font-size: 36px;
+    line-height: 50px;
+  }
+}
+
+@media only screen and (max-width: 400px)  {
+  .latestproperty-title-buttons-container h2 {
+    font-size: 30px;
+    line-height: 40px;
+  }
 }

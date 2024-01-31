@@ -118,6 +118,13 @@
   }
 }
 
+@media only screen and (max-width: 600px)  {
+  .searchofferts h2 {
+    font-size: 36px;
+    line-height: 50px;
+  }
+}
+
 @media only screen and (max-width: 534px)  {
   .searchofferts-firstline {
     flex-direction: column;
@@ -132,5 +139,12 @@
 @media only screen and (max-width: 345px)  {
   .offertitem {
     min-width: none;
+  }
+}
+
+@media only screen and (max-width: 400px)  {
+  .searchofferts h2 {
+    font-size: 30px;
+    line-height: 40px;
   }
 }

@@ -32,7 +32,9 @@ const LatestProperty = () => {
   }
   
 
-  const slideWidth = 329;
+let slideWidth = 329;
+
+
   const slidesCount = latest_property.length;
 
   const sliderStyle = {

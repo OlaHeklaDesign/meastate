@@ -29,7 +29,29 @@ const TestimonialHero = () => {
   }
   
 
-  const slideWidth = 670;
+  let slideWidth = 660;
+
+  function setSlideWidth() {
+    const screenWidth = window.innerWidth;
+  
+    if (screenWidth <= 1275 && screenWidth > 1090) {
+      slideWidth = 550;
+    } else if (screenWidth <= 1090 && screenWidth > 890) {
+      slideWidth = 450;
+    } else if (screenWidth <= 890 && screenWidth > 640) {
+      slideWidth = 600;
+    } else if (screenWidth <= 640 && screenWidth > 440) {
+      slideWidth = 400;
+    } else if (screenWidth <= 440 ) {
+      slideWidth = 280;
+    }
+  }
+  
+  setSlideWidth();
+  console.log(slideWidth);
+  
+  window.addEventListener('resize', setSlideWidth);
+
   const slidesCount = all_testimonials.length;
 
   const sliderStyle = {

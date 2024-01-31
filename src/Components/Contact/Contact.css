@@ -129,8 +129,26 @@
   }
 }
 
+@media only screen and (max-width: 600px)  {
+  .contact-left h2 {
+    font-size: 36px;
+    line-height: 50px;
+    margin-bottom: 20px;
+  }
+  .contact-left p {
+    font-size: 16px;
+  }
+}
+
 @media only screen and (max-width: 448px)  {
   .contact-name-email-box {
     flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 400px)  {
+  .contact-left h2 {
+    font-size: 30px;
+    line-height: 40px;
   }
 }

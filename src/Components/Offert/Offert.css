@@ -68,8 +68,22 @@
   }
 }
 
+@media only screen and (max-width: 600px)  {
+  .offert h2 {
+    font-size: 36px;
+    line-height: 50px;
+  }
+}
+
 @media only screen and (max-width: 574px)  {
   .offert-container {
     flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 400px)  {
+  .offert h2 {
+    font-size: 30px;
+    line-height: 40px;
   }
 }

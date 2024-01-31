@@ -3,7 +3,6 @@
   background-image: url('../Assets/bg-strips.png');
   background-position: center;
   background-repeat: repeat-y;
-  overflow: hidden;
 }
 
 .steps {
@@ -107,5 +106,19 @@
   .steps-left img {
     max-width: 530px;
     width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px)  {
+  .steps-left h2 {
+    font-size: 36px;
+    line-height: 50px;
+  }
+}
+
+@media only screen and (max-width: 400px)  {
+  .steps-left h2 {
+    font-size: 30px;
+    line-height: 40px;
   }
 }
