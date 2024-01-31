@@ -19,7 +19,7 @@ const HeroSearchBar = () => {
       return false;
     } else {
     onSearch();
-    navigate('/meastate/search');
+    navigate('/search');
     setErrorPrice('');
     }
   };
