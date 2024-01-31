@@ -9,12 +9,12 @@ import SearchPage from "./Pages/SearchPage/SearchPage";
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <BrowserRouter basename="/mestate">
         <Header />
         <Routes>
-          <Route path='/meastate' element={<HomePage/>} />
-          <Route path='/meastate/search' element={<SearchPage/>} />
-          <Route path='/meastate/offert' element={<OffertPage/>}>
+          <Route path='/' element={<HomePage/>} />
+          <Route path='/search' element={<SearchPage/>} />
+          <Route path='/offert' element={<OffertPage/>}>
             <Route path=':offertId' element={<OffertPage />} />
           </Route>
         </Routes>
