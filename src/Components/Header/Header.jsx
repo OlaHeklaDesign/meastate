@@ -13,6 +13,11 @@ const Header = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  const handleButtonClick = () => {
+    const contactSection = document.getElementById("contact");
+    contactSection.scrollIntoView({ behavior: "smooth" });
+  }
+
   return (
     <div className="header-bg">
       <header>
@@ -20,22 +25,19 @@ const Header = () => {
         <div className="header-right desktop-nav">
           <ul>
             <li>
-              <a href="">BUY</a>
+              <a href="/#steps">STEPS</a>
             </li>
             <li>
-              <a href="">SELL</a>
+              <a href="/#testimonials">TESTIMONIALS</a>
             </li>
             <li>
-              <a href="">RENT</a>
-            </li>
-            <li>
-              <a href="#offert">AGENCY</a>
+              <a href="/#offert">AGENCY</a>
             </li>
             <li>
               <a href="#contact">CONTACT</a>
             </li>
           </ul>
-          <button>contact with us</button>
+          <button onClick={handleButtonClick}>contact with us</button>
         </div>
         <div className="mobile-nav">
           <img src={mobile_menu} alt="menu" onClick={toggleMobileMenu} />
@@ -43,16 +45,13 @@ const Header = () => {
           <div>
             <ul>
               <li>
-                <a href="">BUY</a>
+                <a href="/#steps">STEPS</a>
               </li>
               <li>
-                <a href="">SELL</a>
+                <a href="/#testimonials">TESTIMONIALS</a>
               </li>
               <li>
-                <a href="">RENT</a>
-              </li>
-              <li>
-                <a href="#offert">AGENCY</a>
+                <a href="/#offert">AGENCY</a>
               </li>
               <li>
                 <a href="#contact">CONTACT</a>

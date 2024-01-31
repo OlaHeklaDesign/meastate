@@ -62,7 +62,7 @@ const TestimonialHero = () => {
   console.log(`current state: ${currentState}`)
 
   return (
-    <div className="testimonial-bg">
+    <div className="testimonial-bg" id="testimonials">
       <div className="testimonialhero">
         <div className="testimonialhero-title-buttons">
           <h2>Opinions of Our Customers</h2>

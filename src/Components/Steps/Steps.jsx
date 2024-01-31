@@ -5,7 +5,7 @@ import steps_img from '../Assets/steps-img.png';
 
 const Steps = () => {
   return (
-  <div className="steps-bg-container">
+  <div className="steps-bg-container" id="steps">
     <section className="steps">
       <div className="steps-main">
         <div className="steps-left">
