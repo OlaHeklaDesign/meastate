@@ -8,9 +8,14 @@ import arrow from '../Assets/arrow_offert.svg';
 
 
 const OffertItem = ({main_image, offer, location, surface, bedrooms, bathrooms, parking, price, id}) => {
+
+  const handleClick = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <Link to={`/offert/${id}`} style={{textDecoration: "none"}}>
-      <div className='offertitem'>
+      <div onClick={handleClick} className='offertitem'>
         <div className="offertitem-image-container">
           <img src={main_image} alt="" className='offertitem-mainimg' />
           <p className='offertitem-offer'>{offer}</p>
