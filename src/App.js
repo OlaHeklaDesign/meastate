@@ -12,9 +12,9 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path='/' element={<HomePage/>} />
-          <Route path='/search' element={<SearchPage/>} />
-          <Route path='/offert' element={<OffertPage/>}>
+          <Route path='/meastate' element={<HomePage/>} />
+          <Route path='/meastate/search' element={<SearchPage/>} />
+          <Route path='/meastate/offert' element={<OffertPage/>}>
             <Route path=':offertId' element={<OffertPage />} />
           </Route>
         </Routes>
