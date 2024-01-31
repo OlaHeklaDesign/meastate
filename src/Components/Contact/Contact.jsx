@@ -49,15 +49,15 @@ const Contact = () => {
   };
 
   return (
-    <div class="contact-bg-container" id='contact'>
-    <section class="contact">
-      <div class="contact-left">
+    <div className="contact-bg-container" id='contact'>
+    <section className="contact">
+      <div className="contact-left">
         <h2>Haven't you found your dream home?</h2>
         <p>Write us what you are looking for and we'll find what you need.</p>
       </div>
-      <div class="contact-right">
+      <div className="contact-right">
         <form ref={form} onSubmit={sendEmail}>
-          <div class="contact-name-email-box">
+          <div className="contact-name-email-box">
             <input  type="text" 
                     placeholder="names" 
                     name="user_name"

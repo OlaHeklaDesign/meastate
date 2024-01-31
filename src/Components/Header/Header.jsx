@@ -17,7 +17,7 @@ const Header = () => {
     <div className="header-bg">
       <header>
         <Link style={{textDecoration: "none"}} to='/'><img src={logo} alt="logo"/></Link>
-        <div class="header-right desktop-nav">
+        <div className="header-right desktop-nav">
           <ul>
             <li>
               <a href="">BUY</a>
@@ -37,7 +37,7 @@ const Header = () => {
           </ul>
           <button>contact with us</button>
         </div>
-        <div class="mobile-nav">
+        <div className="mobile-nav">
           <img src={mobile_menu} alt="menu" onClick={toggleMobileMenu} />
           {isMobileMenuOpen &&
           <div>

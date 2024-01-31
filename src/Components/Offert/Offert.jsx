@@ -7,25 +7,25 @@ import safe_icon from '../Assets/safe.svg';
 
 const Offert = () => {
   return (
-  <section class="offert" id='offert'>
+  <section className="offert" id='offert'>
     <h2>Real estate agency you can trust</h2>
-    <div class="offert-container">
-      <div class="offert-box">
-        <div class="offert-box-image-container">
+    <div className="offert-container">
+      <div className="offert-box">
+        <div className="offert-box-image-container">
           <img src={search_icon} alt="search" />
         </div>
         <h4>Personalized Search</h4>
         <p>Find your dream apartment or home with us. We create a space where dreams of the perfect place become reality</p>
       </div>
-      <div class="offert-box">
-        <div class="offert-box-image-container">
+      <div className="offert-box">
+        <div className="offert-box-image-container">
           <img src={pig_icon} alt="search" />
         </div>
         <h4>Lowest Commissions</h4>
         <p>Uncover your perfect apartment or home with us. We transform dreams into reality, with the lowest commissions.</p>
       </div>
-      <div class="offert-box">
-        <div class="offert-box-image-container">
+      <div className="offert-box">
+        <div className="offert-box-image-container">
           <img src={safe_icon} alt="search" />
         </div>
         <h4>Transaction Security</h4>
