@@ -9,7 +9,7 @@ import SearchPage from "./Pages/SearchPage/SearchPage";
 function App() {
   return (
     <div className="App">
-      <BrowserRouter basename="/mestate">
+      <BrowserRouter basename="/meastate">
         <Header />
         <Routes>
           <Route path='/' element={<HomePage/>} />
